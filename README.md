@@ -3,13 +3,13 @@ repo for uvents project
 
 ##Overview 
 Uvents is a mobile app that offers an interactive platform where students can log into the app, create events, 
-view events on and off campus and be able to view friend’s activity too. Uvents.com will be an information portal that 
+view events on and off campus and be able to view friend’s activity too. www.uvents.com will be an information portal that 
 will allow the user to search and filter for events on and around campus.
 
 ##How to install and/or How to use
-*Mobile app is currently in beta version. It will become available in the next couple of months
+**Mobile app is currently in beta version. It will become available in the next couple of months
 
-1.Visit www.uvents.com to access the website. 
+1.Visit website domain to access the website. **Will receive website domain in the future 
 
 2.Search for events by clicking into the search engine and typing a keyword
 
