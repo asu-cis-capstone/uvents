@@ -1,24 +1,26 @@
 # Uvents
 repo for uvents project
 
-## Overview 
+##Overview: 
 Uvents is a mobile app that offers an interactive platform where students can log into the app, create events, 
 view events on and off campus and be able to view friend’s activity too. Uvents.com will be an information portal that 
 will allow the user to search and filter for events on and around campus.
 
-## How to install and/or How to use:
+##How to install and/or How to use:
 **Mobile app is currently in beta version. It will become available in the next couple of months**
+
 1.Visit www.uvents.com to access the website. 
 2.Search for events by clicking into the search engine and typing a keyword
+
 3.Filter out events by inputting parameters in parameter fields
 
-## List of Contributors: 
+##List of Contributors: 
 -Prajwal Tamang: Back-End Developer/Project Director, ptamang1@asu.edu, ptamang1
 -Jorge Delgado: Back-End Developer, jldelgad@asu.edu, DelgadoJorge 
 -Jonathan Romain: Front-End Developer/Analyst, jqromain@asu.edu, jqromain
 -Steven Lie: Front-End Developer, slie2@asu.edu, StevenLie
 
-##Product Backlog
+##Product Backlog:
 1.Decide Roles
 2.Work on front-end
 -Work on CSS; create similar  
