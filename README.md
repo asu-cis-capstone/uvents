@@ -1,3 +1,4 @@
+
 ##Overview 
 Uvents is a mobile app that offers an interactive platform where students can log into the app, create events, 
 view events on and off campus and be able to view friend’s activity too. www.uvents.com will be an information portal that 
