@@ -23,22 +23,12 @@ will allow the user to search and filter for events on and around campus.
 -Steven Lie: Front-End Developer, slie2@asu.edu, StevenLie
 
 ##Product Backlog:
-1.Decide Roles
-
-2.Work on front-end
--Work on CSS; create similar 
- 
--Create images and animations using Adobe Software
-
--Implement design for search engines, headings,  etc.
-
-3.Work on back-end
-
--Connect  a SQL Database including all keys
-
--PHP
-
--Create basic framework of website
+1. Design Homepage
+2. Design About Us Page
+3. Design Clubs Page
+4. Link Website to Database
+5. Design Login/Register Page
+6. Design Contact Us Page
 
 v.0.1
  
