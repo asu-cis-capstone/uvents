@@ -100,21 +100,21 @@ body{
 				padding-top: 5%;}
  
 a:link{
-	color: 					#1975FF;
+	color: 				#1975FF;
 	text-decoration: 	none;
 	
 }
-a:visited	{ color:white; } 
+a:visited	{ color: 		#1975FF; } 
 
 a:hover{ 
 	color:				black;
-	border-radius:		6px;
+	/* border-radius:		6px;
 	background-color:	whitesmoke;
 	font-weight:		bold;
 	margin-left:		1px;
 	padding-left:		10px;
 	padding-right:		10px;
-	width:				100px;
+	width:				100px; */
 	}
 
 label {
