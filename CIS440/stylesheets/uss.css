@@ -43,7 +43,7 @@ body{
 
 #header {
 	clear:				both;
-	text-align:			left;
+	text-align:			center;	
 	/* background-color:	rgba(0,0,0, 0.5); 
 	border-radius:		10px;
 	*/
@@ -54,9 +54,8 @@ body{
 	float:				left;
 	padding-top:		10px;
 	padding-left:		6px;
-	background-color:   rgba(255,255,255,.5);
-	color: 					#1975FF;
-	border:				2px solid black;				
+
+	color: 				#1975FF;			
 	text-decoration:	none;
  }
 

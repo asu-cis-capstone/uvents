@@ -26,9 +26,11 @@ Home Page
   </head>
 
   <body>
-    
+  
 	<div id="header">
-		<p class="sh1">Uvents<span class="sh1a">&reg;</span></p>
+		 <a href= "http://www.asu.edu/" target="_blank">
+		<img src="images/ueventslogo.png" alt="Logo"/>
+	</a>
 	</div>	
 	
 	<div id="navigation">
@@ -42,8 +44,8 @@ Home Page
 	<div id="sponsor">
 		<p>Sponsors</p>
 		<p>
-		<a href= "http://www.asu.edu/" target="_blank">
-			<img src="images/asu.jpg" alt=" tripadvisor"/>
+		<a href= "http://www.uevents.net" target="_blank">
+			<img src="images/asu.jpg" alt="ASU events"/>
 		</a>
 		<p>Arizona State University</p>		
 		</p>
@@ -52,7 +54,9 @@ Home Page
 	<div id = "searchform">
 			<form id="joinform" action="confirm8.php" method="post">
 			<p>
-			<input type="text" id= "fname" name = "fname" autofocus required title="4-30 characters, u/l case, - and ' only!" pattern="[a-zA-Z-' ]{4,30}" onfocus="namemsg()"/>
+			<input type="text" id= "fname" name = "fname" autofocus required title="4-30 characters, u/l case, - and ' only!" pattern="[a-zA-Z-' ]{4,30}" 
+			placeholder="Enter your event"
+			onfocus="namemsg()"/>			
 			<br />
 			</p>
 </div>	
