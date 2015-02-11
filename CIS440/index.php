@@ -48,16 +48,17 @@ Home Page
 		<p>Arizona State University</p>		
 		</p>
 	</div>
-	
-<form method = "post" action = index.php">
+
+<!--When the submit button is clicked, the database results will be posted on the same page-->	
+<form method = "post" action = "index.php">
 <input type="hidden" name = "submitted" value = "true"/>
 
 
-<label>Search Category:
-
+<label>Search Parameter:
+<!--A drop down list of search parameters to chose from-->
 <select name= "category">
-	<option value="ename">Event Name</option>
-	<option value="category">Category</option>
+	<option value="EventName">Event Name</option>
+	<option value="EventCategory">Event Category</option>
 </label>
 
 <label>Search Criteria: <input type = "text" name = "criteria"/></label>
@@ -67,55 +68,60 @@ Home Page
 </form>
 
 <?php
+//Only want to proceed entering the database if it is safe, that is, the page was submitted
 if (isset($_POST['submitted'])) {
 
-//connect to database
+//Call on this file to connect to database
 include('local-connect.php');
 
+//Define variables
 $category = $_POST['category'];
 $criteria = $_POST['criteria'];
-$query = "SELECT * FROM	'events' WHERE $category = '$criteria' ";
-$result =  mysqli_query($dbc, $query) or die('error obtaining data');
+$query = "SELECT * FROM	events WHERE $category = '$criteria'"; // Select statement to call data from events category based on the search criteria
+$result =  mysqli_query($dbc, $query) or die('error obtaining data'); // Store the results in a variable unless there was in error in the process
 
+//Create a table to display any matching records
 echo "<table>";
-echo"<tr><th>EventName</th><th>EventDate</th><th>EventTime</th>
+echo"<tr><th>EventId</th><th>EventName</th><th>EventDate</th><th>EventTime</th>
 		<th>EventLocation</th><th>EventDescription</th><th>EventCost</th>
 		<th>EventSponsor</th><th>EventSchool</th><th>EventImg</th>
 		<th>EventEmail</th><th>EventPhoneNumber</th><th>EventWebsiteAddress</th>
 		<th>EventCategory</th></tr>";
-
-/* 		while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
+//Create a loop to go through all of the records in the events table and post them on the webpage
+		while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
 {
 echo "<tr><td>";
-echo "$row['EventName']";
+echo $row['EventId'];
 echo "</td><td>";
-echo "$row['EventDate']";
+echo $row['EventName'];
 echo "</td><td>";
-echo "$row['EventTime']";
+echo $row['EventDate'];
 echo "</td><td>";
-echo "$row['EventLocation']";
+echo $row['EventTime'];
 echo "</td><td>";
-echo "$row['EventDescription']";
+echo $row['EventLocation'];
 echo "</td><td>";
-echo "$row['EventCost']";
+echo $row['EventDescription'];
 echo "</td><td>";
-echo "$row['EventSponsor']";
+echo $row['EventCost'];
 echo "</td><td>";
-echo "$row['EventSchool']";
+echo $row['EventSponsor'];
 echo "</td><td>";
-echo "$row['EventImg']";
+echo $row['EventSchool'];
 echo "</td><td>";
-echo "$row['EventEmail']";
+echo $row['EventImg'];
 echo "</td><td>";
-echo "$row['EventPhoneNumber']";
+echo $row['EventEmail'];
 echo "</td><td>";
-echo "$row['EventWebsiteAddress']";
+echo $row['EventPhoneNumber'];
 echo "</td><td>";
-echo "$row['EventCategory']";
+echo $row['EventWebsiteAddress'];
+echo "</td><td>";
+echo $row['EventCategory'];
 echo "</td></tr>";
 
 
-}		 */
+}		
 		
 echo "</table>";
 
