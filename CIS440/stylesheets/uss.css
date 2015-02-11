@@ -121,6 +121,10 @@ label {
 	float:				left;
 }
 
+table {background-color: #FCF;}
+	
+th{width: 150px;text-align: left;}
+
 #messages{
 	font-size:			95%;
 	font-style:			italic;

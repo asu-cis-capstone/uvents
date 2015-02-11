@@ -7,7 +7,7 @@
 	$user	= 'root';
 	$pw		= '';
 	$db		= 'uvents';
-	
+
 	//Connect to the MySQL Server
 	$dbc	= mysqli_connect($host, $user, $pw, $db) or die('Unable to connect (LOCAL)');
 ?>

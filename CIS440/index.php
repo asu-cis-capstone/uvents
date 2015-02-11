@@ -1,44 +1,6 @@
 <!DOCTYPE html>
 
 <!-- 
-confirm8.php
-Jorge Delgado
--->
-
-<?php
-	//Connect to MySQL database
-	include('local-connect.php');
-	
-	//Define and initialize PHP variables to hold data entered on the Registration Form
-	$name2 = $_POST['name'];
-	$name = mysqli_real_escape_string($dbc, $name2);
-	$uname = $_POST['username'];
-	$pword = $_POST['password'];
-	$prob = $_POST['probation'];
-	$email = $_POST['email'];
-	$hot = $_POST['hotornot'];
-	$smart = $_POST['smartornot'];
-	$beers = $_POST['beers'];
-	$cons = $_POST['consider'];
-	$cons = mysqli_real_escape_string($dbc, $cons);
-	if	
- 	
-	// Build the query to populate our hw7 table
-	$query =
-	"INSERT INTO hw7(name, uname, pword, prob, email, hot, smart, beers, cons)" .
-	"VALUES('$name', '$uname', '$pword', '$prob','$email', '$hot', '$smart', '$beers', '$cons' )";
-	
-	// Run the query we just built
-	$result = mysqli_query($dbc, $query) or die('Unable to write to database!');
-	
-	// Close the database connection
-	mysqli_close($dbc);
-	
-	
-	
-?>
-
-<!-- 
 Home Page
 -->
 
@@ -60,7 +22,7 @@ Home Page
 	
     <!-- Web Page Title -->
     <title>Home Page</title>
-
+	
   </head>
 
   <body>
@@ -87,13 +49,81 @@ Home Page
 		</p>
 	</div>
 	
-	<div id = "searchform">
-			<form id="joinform" action="confirm8.php" method="post">
-			<p>
-			<input type="text" id= "fname" name = "fname" autofocus required title="4-30 characters, u/l case, - and ' only!" pattern="[a-zA-Z-' ]{4,30}" onfocus="namemsg()"/>
-			<br />
-			</p>
-</div>	
+<form method = "post" action = index.php">
+<input type="hidden" name = "submitted" value = "true"/>
+
+
+<label>Search Category:
+
+<select name= "category">
+	<option value="ename">Event Name</option>
+	<option value="category">Category</option>
+</label>
+
+<label>Search Criteria: <input type = "text" name = "criteria"/></label>
+
+<input type="submit"/>
+
+</form>
+
+<?php
+if (isset($_POST['submitted'])) {
+
+//connect to database
+include('local-connect.php');
+
+$category = $_POST['category'];
+$criteria = $_POST['criteria'];
+$query = "SELECT * FROM	'events' WHERE $category = '$criteria' ";
+$result =  mysqli_query($dbc, $query) or die('error obtaining data');
+
+echo "<table>";
+echo"<tr><th>EventName</th><th>EventDate</th><th>EventTime</th>
+		<th>EventLocation</th><th>EventDescription</th><th>EventCost</th>
+		<th>EventSponsor</th><th>EventSchool</th><th>EventImg</th>
+		<th>EventEmail</th><th>EventPhoneNumber</th><th>EventWebsiteAddress</th>
+		<th>EventCategory</th></tr>";
+
+/* 		while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
+{
+echo "<tr><td>";
+echo "$row['EventName']";
+echo "</td><td>";
+echo "$row['EventDate']";
+echo "</td><td>";
+echo "$row['EventTime']";
+echo "</td><td>";
+echo "$row['EventLocation']";
+echo "</td><td>";
+echo "$row['EventDescription']";
+echo "</td><td>";
+echo "$row['EventCost']";
+echo "</td><td>";
+echo "$row['EventSponsor']";
+echo "</td><td>";
+echo "$row['EventSchool']";
+echo "</td><td>";
+echo "$row['EventImg']";
+echo "</td><td>";
+echo "$row['EventEmail']";
+echo "</td><td>";
+echo "$row['EventPhoneNumber']";
+echo "</td><td>";
+echo "$row['EventWebsiteAddress']";
+echo "</td><td>";
+echo "$row['EventCategory']";
+echo "</td></tr>";
+
+
+}		 */
+		
+echo "</table>";
+
+} // end of main statement
+
+
+?>
+	
 	
 	<div id = "footer">
 			<p>&copy;2015, Uvents</p>
