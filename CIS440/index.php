@@ -30,7 +30,7 @@ Home Page
 	<div id="header">
 		<p>
 			<a href= "index.php" target="_self">
-			<img src="images/ueventslogo.png" alt=" uvents"/>
+			<img src="images/uventslogo.png" alt=" uvents"/>
 			</a>
 		</p>
 	</div>	
