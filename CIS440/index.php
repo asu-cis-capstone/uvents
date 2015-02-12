@@ -28,7 +28,11 @@ Home Page
   <body>
     
 	<div id="header">
-		<p class="sh1">Uvents<span class="sh1a">&reg;</span></p>
+		<p>
+			<a href= "index.php" target="_self">
+			<img src="images/ueventslogo.png" alt=" uvents"/>
+			</a>
+		</p>
 	</div>	
 	
 	<div id="navigation">
