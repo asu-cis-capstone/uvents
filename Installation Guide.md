@@ -2,11 +2,17 @@
 
 ##Software/languages/frameworks used for this installation
 -PhpMyAdmin 
+
 -Notepad++
+
 -MySQL version 5.6.17
+
 -PHP version 5.5.12
+
 -HTML
+
 -CSS
+
 -SQL/Parse (back end technology)
 
 ##How to install and/or How to use
