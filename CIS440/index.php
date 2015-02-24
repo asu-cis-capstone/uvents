@@ -36,11 +36,12 @@ Home Page
 	</div>	
 	
 	<div id="navigation">
-		<p><a href="aboutus.htm">About Us</a></p>
-		<p><a href="clubs.htm">Clubs</a></p>
-		<p><a href="login.htm">Login</a></p>
-		<p><a href="contact.htm">Contact Us</a></p>
-
+	<ul> 
+			<li><a href="aboutus.htm">About Us</a></li>
+			<li><a href="clubs.htm">Clubs</a></li>
+			<li><a href="login.htm">Login</a></li>
+			<li><a href="contact.htm">Contact Us</a></li>
+	</ul>
 	</div>
 
 <!--When the submit button is clicked, the database results will be posted on the events-searched page-->	
