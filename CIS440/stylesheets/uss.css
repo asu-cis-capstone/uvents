@@ -42,7 +42,7 @@ body{
 } 
 
 #header {
-
+	clear:			 	both;
 	text-align:			left;	
 	/* background-color:	rgba(0,0,0, 0.5); 
 	border-radius:		10px;
@@ -63,12 +63,13 @@ font-weight: bold;
 text-align: center;
 margin-bottom: 300px;
 margin-left: 150px;
+
 }
 
 #navigation ul li {
 list-style: none; /* delete all bullet points */
 float: left;
-width: 200px; /* make it as a list*/
+width: 245px; /* make it as a list*/
 line-height: 2em; /* make it double space*/
 }
 
@@ -99,7 +100,9 @@ background: white
  	border:				2px solid black;
 	*/
  }
-
+ 
+#searchform{ text-align: center; /* no padding */}
+				
 #footer{
 	font-size:			55%;
 	font-style:			italic;
@@ -108,8 +111,7 @@ background: white
 	text-align:			center;
 }
 
-#searchform{ text-align: center;
-				padding-top: 5%;}
+
  
 a:link{
 	color: 				#1975FF;
