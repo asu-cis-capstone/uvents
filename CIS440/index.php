@@ -45,7 +45,7 @@ Home Page
 	</div>
 
 <!--When the submit button is clicked, the database results will be posted on the events-searched page-->	
-<form method = "post" action = "events-searched.php">
+<form method = "post" action = "eventlist.php">
 <input type="hidden" name = "submitted" value = "true"/>
 
 
