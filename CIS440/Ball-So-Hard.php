@@ -76,7 +76,7 @@ Events Searched
 		echo "<div id = 'event'>";	
 			echo"<p>$eventname</p>";
 		echo "</div>";
-	}
+	} // end while statement
 	
 	/* //Create a table to display any matching records
 	echo "<table>";
