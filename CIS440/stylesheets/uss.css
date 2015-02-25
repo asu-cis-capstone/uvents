@@ -43,7 +43,9 @@ body{
 
 #header {
 	clear:			 	both;
-	text-align:			left;	
+	text-align:			left;
+	height:				20%;
+	weight:				20%;
 	/* background-color:	rgba(0,0,0, 0.5); 
 	border-radius:		10px;
 	*/
