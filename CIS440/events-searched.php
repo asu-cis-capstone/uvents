@@ -36,40 +36,13 @@ Events Searched
 	</div>	
 	
 	<div id="navigation">
-		<p><a href="aboutus.htm">About Us</a></p>
-		<p><a href="clubs.htm">Clubs</a></p>
-		<p><a href="login.htm">Login</a></p>
-		<p><a href="contact.htm">Contact Us</a></p>
-
+		<ul> 
+			<li><a href="aboutus.htm">About Us</a></li>
+			<li><a href="clubs.htm">Clubs</a></li>
+			<li><a href="login.htm">Login</a></li>
+			<li><a href="contact.htm">Contact Us</a></li>
+	</ul>
 	</div>
-	
-	<div id="sponsor">
-		<p>Sponsors</p>
-		<p>
-		<a href= "http://www.asu.edu/" target="_blank">
-			<img src="images/asu.jpg" alt=" tripadvisor"/>
-		</a>
-		<p>Arizona State University</p>		
-		</p>
-	</div>
-
-<!--When the submit button is clicked, the database results will be posted on the same page-->	
-<form method = "post" action = "index.php">
-<input type="hidden" name = "submitted" value = "true"/>
-
-
-<label>Search Parameter:
-<!--A drop down list of search parameters to chose from-->
-<select name= "category">
-	<option value="EventName">Event Name</option>
-	<option value="EventCategory">Event Category</option>
-</label>
-
-<label>Search Criteria: <input type = "text" name = "criteria"/></label>
-
-<input type="submit"/>
-
-</form>
 
 <?php
 //Only want to proceed entering the database if it is safe, that is, the page was submitted

@@ -59,71 +59,7 @@ Home Page
 
 <input type="submit"/>
 
-</form>
-
-<?php
-//Only want to proceed entering the database if it is safe, that is, the page was submitted
-if (isset($_POST['submitted'])) {
-
-//Call on this file to connect to database
-include('local-connect.php');
-
-//Define variables
-$category = $_POST['category'];
-$criteria = $_POST['criteria'];
-$query = "SELECT * FROM	events WHERE $category LIKE '%$criteria%'"; // Select statement to call data from events category based on the search criteria
-$result =  mysqli_query($dbc, $query) or die('error obtaining data'); // Store the results in a variable unless there was in error in the process
-
-//Create a table to display any matching records
-echo "<table>";
-echo"<tr><th>EventId</th><th>EventName</th><th>EventDate</th><th>EventTime</th>
-		<th>EventLocation</th><th>EventDescription</th><th>EventCost</th>
-		<th>EventSponsor</th><th>EventSchool</th><th>EventImg</th>
-		<th>EventEmail</th><th>EventPhoneNumber</th><th>EventWebsiteAddress</th>
-		<th>EventCategory</th></tr>";
-//Create a loop to go through all of the records in the events table and post them on the webpage
-		while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
-{
-echo "<tr><td>";
-echo $row['EventId'];
-echo "</td><td>";
-echo $row['EventName'];
-echo "</td><td>";
-echo $row['EventDate'];
-echo "</td><td>";
-echo $row['EventTime'];
-echo "</td><td>";
-echo $row['EventLocation'];
-echo "</td><td>";
-echo $row['EventDescription'];
-echo "</td><td>";
-echo $row['EventCost'];
-echo "</td><td>";
-echo $row['EventSponsor'];
-echo "</td><td>";
-echo $row['EventSchool'];
-echo "</td><td>";
-echo $row['EventImg'];
-echo "</td><td>";
-echo $row['EventEmail'];
-echo "</td><td>";
-echo $row['EventPhoneNumber'];
-echo "</td><td>";
-echo $row['EventWebsiteAddress'];
-echo "</td><td>";
-echo $row['EventCategory'];
-echo "</td></tr>";
-
-
-}		
-		
-echo "</table>";
-
-} // end of main statement
-
-
-?>
-	
+</form>	
 	
 	<div id = "footer">
 			<p>&copy;2015, Uvents</p>
