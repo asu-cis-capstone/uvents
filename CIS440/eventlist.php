@@ -44,40 +44,33 @@ Events Searched
 	</ul>
 	</div>
 
-<?php
-//Only want to proceed entering the database if it is safe, that is, the page was submitted
-if (isset($_POST['submitted'])) {
+	<?php
+	//Only want to proceed entering the database if it is safe, that is, the page was submitted
+	if (isset($_POST['submitted'])) 
+	{
 
-//Call on this file to connect to database
-include('local-connect.php');
+		//Call on this file to connect to database
+		include('local-connect.php');
 
-//Define variables
-$category = $_POST['category'];
-$criteria = $_POST['criteria'];
-$query = "SELECT * FROM	events WHERE $category LIKE '%$criteria%'"; // Select statement to call data from events category based on the search criteria
-$result =  mysqli_query($dbc, $query) or die('error obtaining data'); // Store the results in a variable unless there was in error in the process
+		//Define variables
+		$category = $_POST['category'];
+		$criteria = $_POST['criteria'];
+		$query = "SELECT * FROM	events WHERE $category LIKE '%$criteria%'"; // Select statement to call data from events category based on the search criteria
+		$result =  mysqli_query($dbc, $query) or die('error obtaining data'); // Store the results in a variable unless there was in error in the process
 
-//Create a loop to go through all of the records in the events table and post them on the webpage
+		//Create a loop to go through all of the records in the events table and post them on the webpage
 		while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
-{
+		{
 
-$eventname = $row['EventName'];
-/* echo"<a href="events-searched.php">$eventname</a>";
-echo"<p></p>"; */
-/*echo $row['EventName']; */
-echo "<p>$eventname</p>";
+			$eventname = $row['EventName'];
+			$webpage =  str_replace(" ", "-", ltrim(rtrim($eventname)));
+			echo "<p><a href = '$webpage.php'>$eventname</a></p>";
+	
+		} // end while statement				
 
+	} // end of if statement
+	?>
 
-
-
-}		
-		
-
-
-} // end of main statement
-
-
-?>
 	
 	
 	<div id = "footer">
