@@ -55,8 +55,30 @@ Events Searched
 	//Define variables
 	$query = "SELECT * FROM	events WHERE EventName = 'Ball So Hard' "; // Select statement to call data from events category based on the search criteria
 	$result =  mysqli_query($dbc, $query) or die('error obtaining data'); // Store the results in a variable unless there was in error in the process
-
-	//Create a table to display any matching records
+	
+	while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
+	{
+		//Create variables to store event columns in
+		$eventname = $row['EventName'];
+		$eventdate = $row['EventDate'];
+		$eventtime = $row['EventTime'];
+		$eventloc = $row['EventLocation'];
+		$eventdes = $row['EventDescription'];
+		$eventcost = $row['EventCost'];
+		$eventsponsor = $row['EventSponsor'];
+		$eventschool = $row['EventSchool'];
+		$eventimg = $row['EventImg'];
+		$eventemail = $row['EventEmail'];
+		$eventphone = $row['EventPhoneNumber'];
+		$eventweb = $row['EventWebsiteAddress'];
+		$eventcat = $row['EventCategory'];
+		
+		echo "<div id = 'event'>";	
+			echo"<p>$eventname</p>";
+		echo "</div>";
+	}
+	
+	/* //Create a table to display any matching records
 	echo "<table>";
 	echo"<tr><th>EventName</th>
 				  <th>EventDate</th>
@@ -106,7 +128,7 @@ Events Searched
 
 		}		
 			
-	echo "</table>";
+	echo "</table>"; */
 
 	/* } // end of main statement
 	 */
