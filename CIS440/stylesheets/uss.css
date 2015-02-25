@@ -90,6 +90,18 @@ display: block;
 background: white
 }
 
+#event {
+	width:				55%;
+	font-size:			125%;
+	color: 				black;
+	margin:				auto;
+	text-align:			center;
+	/*background-color:   rgba(0,0,0,.5);
+ 	border:				2px solid black;
+	*/
+ }
+ 
+
 #main {
 	width:				55%;
 	font-size:			125%;
