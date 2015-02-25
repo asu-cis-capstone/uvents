@@ -65,7 +65,7 @@ $eventname = $row['EventName'];
 /* echo"<a href="events-searched.php">$eventname</a>";
 echo"<p></p>"; */
 /*echo $row['EventName']; */
-echo "<p>$eventname</p>";
+echo "<p><a href = 'events-searched.php'>$eventname</a></p>";
 
 
 
