@@ -53,9 +53,8 @@ Events Searched
 		include('local-connect.php');
 
 		//Define variables
-		$category = $_POST['category'];
 		$criteria = $_POST['criteria'];
-		$query = "SELECT * FROM	events WHERE $category LIKE '%$criteria%'"; // Select statement to call data from events category based on the search criteria
+		$query = "SELECT * FROM	events WHERE EventName LIKE '%$criteria%'"; // Select statement to call data from events category based on the search criteria
 		$result =  mysqli_query($dbc, $query) or die('error obtaining data'); // Store the results in a variable unless there was in error in the process
 
 		//Create a loop to go through all of the records in the events table and post them on the webpage
