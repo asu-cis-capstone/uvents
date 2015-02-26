@@ -183,15 +183,31 @@ input[type=text], input[type=password], input[type=email]{
 	text-align:		center;
 	padding:			3px;
 	border-radius:		10px;
+
 	
 }
 
 input:not([type=submit]):not([type=checkbox]):not([type=reset]){
 	background:			white no-repeat top right;
 	height:					50%;
-	color:				#1975FF;
+	width:					80%;
+	color:				black;
+	margin-align:		auto;
 }
 
 input:not([type=submit]):not([type=checkbox]):valid{
 	background-image:	url('../images/greencheck.png');
+		
+}
+
+input[type=submit]{
+	width: 7.5%;
+	font-size:			  100%;
+	text-align:			  center;
+	margin-left:			-2.5%;
+	padding:				  0.2%;
+	border-radius:		  10px;
+	background-color:  #00003D;
+	color:			  white;			
+		
 }

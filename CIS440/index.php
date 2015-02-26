@@ -88,8 +88,8 @@ Home Page
 
 				<label><input type = "text" name = "criteria"/></label>
 
-			<input type="submit"/>
-			<a class = "btn btn-info input type="submit">Search</a>
+			<input type="submit" value = "Search" />
+			
 		</form>				
 
 
