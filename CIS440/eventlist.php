@@ -104,6 +104,8 @@ Events Searched
 			
 			} // end while statement				
 			echo "</div>";
+		echo "</div>";
+			
 	} // end of if statement
 	?>
 

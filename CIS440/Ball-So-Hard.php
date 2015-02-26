@@ -89,7 +89,7 @@ Events Searched
 	
 	while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
 	{
-		//Create variables to store event columns in
+		//Store event columns in variables
 		$eventname = $row['EventName'];
 		$eventdate = $row['EventDate'];
 		$eventtime = $row['EventTime'];
@@ -107,6 +107,12 @@ Events Searched
 		echo "<div id = 'event'>";	
 			echo"<p>$eventname</p>";
 		echo "</div>";
+		
+		echo "<div class = 'container'>";
+			echo"<div class = 'jumbotron text-left'>";
+				echo"<p>$eventdes<p>";
+			echo"</div>";
+		echo"</div>";
 	} // end while statement
 	
 	/* //Create a table to display any matching records
