@@ -36,7 +36,7 @@ Home Page
 	<div class = "navbar navbar-default navbar-static-top">
 		<div class = "container">
 		
-			<a href= "#" class = "navbar-brand">uvents</a>
+			<a href= "index.php" class = "navbar-brand">uvents</a>
 			
 			<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
 				<span class = "icon-bar"></span>
@@ -46,7 +46,7 @@ Home Page
 			
 			<div class = "collapse navbar-collapse navHeaderCollapse">
 				<ul class = "nav navbar-nav navbar-right">
-					<li class = "active"><a href = "home.htm">Home</a></li>				
+					<li class = "active"><a href = "index.php">Home</a></li>				
 					<li><a href = "aboutus.htm">About Us</a></li>
 					<li><a href = "clubs.htm">Clubs</a></li>	
 					<li class = "dropdown">
