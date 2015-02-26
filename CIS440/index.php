@@ -109,11 +109,19 @@ Home Page
 <!--When the submit button is clicked, the database results will be posted on the events-searched page-->	
 
 	
-	<div id = "footer">
-			<p>&copy;2015, uvents</p>
-			<p></p>
+	<div id="footer">
+		<p>
+			<a href="https://www.apple.com/itunes/">
+				<img src="images/ios.png" alt="HTML Email Icon" />
+			</a>			
+			<a href="https://play.google.com/store?hl=en">
+				<img src="images/gplay.png" alt="HTML Email Icon" />
+			</a>
+		<br />
+			&copy;2014, uvents
+		</p>
 	</div>
- 
+	
 	</body>
 </html>
 
