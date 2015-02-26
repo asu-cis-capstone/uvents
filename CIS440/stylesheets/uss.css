@@ -125,7 +125,11 @@ background: white
 	text-align:			center;
 }
 
-
+#footer img {
+	width:  150px;
+	height: 53px;
+	
+}
  
 a:link{
 	color: 				#1975FF;
