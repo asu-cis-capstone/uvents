@@ -97,7 +97,7 @@ Events Searched
 			{
 
 				$eventname = $row['EventName']; // store the eventname value in a variable
-				$webpage =  str_replace(" ", "-", ltrim(rtrim($eventname))); //format,trim, and store the value in a variable
+				$webpage =  str_replace("/", "-", str_replace(" ", "-", ltrim(rtrim($eventname)))); //format,trim, and store the value in a variable
 				
 				//Will grab the eventname based on the search input and create a hyperlink to it's proper page
 				echo "<p><a href = '$webpage.php'>$eventname</a></p>"; 
