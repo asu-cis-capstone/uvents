@@ -5,9 +5,8 @@ Jorge Delgado
 
 body{
 	color:				#1975FF;
-	font-family:		"Segoe UI Light",Segoe,Tahoma,Arial,Verdana,sans-serif;		
-	/*background-image:	url('../images/mud.jpg');
-	*/
+/* 	font-family:		"Segoe UI Light",Segoe,Tahoma,Arial,Verdana,sans-serif;		*/	
+	font-family:	"SUNN";
 	background-color: whitesmoke;
 	background-size:	cover;
 	margin:				1% 1%;
