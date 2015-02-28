@@ -15,7 +15,7 @@ Events Searched
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
     <!-- Link tag for CSS -->
-	<link href = "bootstrap/css/bootstrap-theme-flat.css" rel = "stylesheet">
+	<link href = "bootstrap/css/bootstrap-theme-slate.css" rel = "stylesheet">
 	<link href = "bootstrap/css/styles.css" rel = "stylesheet">
 	
 	<!-- Javascript tags -->

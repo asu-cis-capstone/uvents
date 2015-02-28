@@ -15,9 +15,8 @@ Events Searched
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
     <!-- Link tag for CSS -->
-	<link href = "bootstrap/css/bootstrap-theme-flat.css" rel = "stylesheet">
+	<link href = "bootstrap/css/bootstrap-theme-superhero.css" rel = "stylesheet">
 	<link href = "bootstrap/css/styles.css" rel = "stylesheet">
-	
 	
 	<!-- Javascript tags -->
 	<script type="text/javascript" src="js/messages.js"></script>
@@ -28,7 +27,7 @@ Events Searched
 	<link rel="icon" href="images/blueplane.png"/>
 	
     <!-- Web Page Title -->
-    <title>List of Events</title>
+    <title>TicketMaster/LiveNation</title>
 	
   </head>
 
@@ -77,40 +76,57 @@ Events Searched
 
 	<?php
 	//Only want to proceed entering the database if it is safe, that is, the page was submitted
-	if (isset($_POST['submitted'])) 
+
+	/* if (isset($_POST['submitted'])) { */
+
+	//Call on this file to connect to database
+	include('local-connect.php');
+
+	//Define variables
+	$query = "SELECT * FROM	events WHERE EventId = 1 "; // Select statement to call data from events category based on the search criteria
+	$result =  mysqli_query($dbc, $query) or die('error obtaining data'); // Store the results in a variable unless there was in error in the process
+	
+	while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
 	{
-
-		//Call on this file to connect to database
-		include('local-connect.php');
-
-		//Define variables
-		$criteria = $_POST['criteria'];
-		$query = "SELECT * FROM	events WHERE EventName LIKE '%$criteria%'"; // Select statement to call data from events category based on the search criteria
-		$result =  mysqli_query($dbc, $query) or die('error obtaining data'); // Store the results in a variable unless there was in error in the process
-		
-		//Declare html div body
-		echo "<div class = 'container'>";
-		echo"<h1>Search Results:</h1>";
-			echo"<div class = 'jumbotron text-left'>";
-			
-			//Create a loop to go through all of the records in the events table and post them on the webpage
-			while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
-			{
-
-				$eventname = $row['EventName']; // store the eventname value in a variable
-				$webpage =  str_replace("/", "-", str_replace(" ", "-", ltrim(rtrim($eventname)))); //format,trim, and store the value in a variable
-				
-				//Will grab the eventname based on the search input and create a hyperlink to it's proper page
-				echo "<p><a href = '$webpage.php' class = 'btn btn-success'>$eventname</a></p>"; 
-			
-			} // end while statement				
-			echo "</div>";
+		//Store event columns in variables
+		$eventname = $row['EventName'];
+		$eventdate = $row['EventDate'];
+		$eventtime = $row['EventTime'];
+		$eventloc = $row['EventLocation'];
+		$eventdes = $row['EventDescription'];
+		$eventcost = $row['EventCost'];
+		$eventsponsor = $row['EventSponsor'];
+		$eventschool = $row['EventSchool'];
+		$eventimg = $row['EventImg'];
+		$eventemail = $row['EventEmail'];
+		$eventphone = $row['EventPhoneNumber'];
+		$eventweb = $row['EventWebsiteAddress'];
+		$eventcat = $row['EventCategory'];
+	
+		echo "<div class = 'container'>";	
+			echo"<h1>$eventname</h1>";
 		echo "</div>";
-			
-	} // end of if statement
+		
+		echo "<div class = 'container'>";
+			echo"<div class = 'jumbotron text-left'>";
+				echo"<img src='images/ticketmaster.jpg' alt='ticketmaster'/>";
+				echo"<h5><strong>Date: </strong>$eventdate</h5>";
+				echo"<h5><strong>Time: </strong>$eventtime</h5>";
+				echo"<h5><strong>Location: </strong>$eventloc</h5>";
+				echo"<h5><strong>Sponsored by: </strong>$eventsponsor</h5>";
+				echo"<h5><strong>Affiliated with: </strong>$eventschool</h5>";
+				echo"<p><strong>Description: </strong></p>";
+				echo"<p>$eventdes</p>";
+				echo"<h5><strong>Email: </strong>$eventemail</h5>";
+				echo"<h5><strong>Phone Number: </strong>$eventphone</h5>";
+				echo"<h5><strong>Website: </strong>$eventweb</h5>";
+				
+			echo"</div>";
+		echo"</div>";
+	} // end while statement
+
 	?>
 
-	
 	
 	<div class = "container text-center">
 			<p>&copy;2015, Uvents</p>
