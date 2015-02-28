@@ -90,6 +90,7 @@ Events Searched
 		
 		//Declare html div body
 		echo "<div class = 'container'>";
+		echo"<h1>Search Results:</h1>";
 			echo"<div class = 'jumbotron text-left'>";
 			
 			//Create a loop to go through all of the records in the events table and post them on the webpage
@@ -100,7 +101,7 @@ Events Searched
 				$webpage =  str_replace("/", "-", str_replace(" ", "-", ltrim(rtrim($eventname)))); //format,trim, and store the value in a variable
 				
 				//Will grab the eventname based on the search input and create a hyperlink to it's proper page
-				echo "<p><a href = '$webpage.php'>$eventname</a></p>"; 
+				echo "<p><a href = '$webpage.php' class = 'btn btn-success'>$eventname</a></p>"; 
 			
 			} // end while statement				
 			echo "</div>";
