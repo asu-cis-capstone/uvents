@@ -111,7 +111,7 @@ Events Searched
 
 	
 	
-	<div id = "footer">
+	<div class = "container text-center">
 			<p>&copy;2015, Uvents</p>
 			<p></p>
 	</div>

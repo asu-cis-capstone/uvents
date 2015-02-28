@@ -113,66 +113,11 @@ Events Searched
 			echo"</div>";
 		echo"</div>";
 	} // end while statement
-	
-	/* //Create a table to display any matching records
-	echo "<table>";
-	echo"<tr><th>EventName</th>
-				  <th>EventDate</th>
-				  <th>EventTime</th>
-				  <th>EventLocation</th>
-				  <th>EventDescription</th>
-				  <th>EventCost</th>
-				  <th>EventSponsor</th>
-				  <th>EventSchool</th>
-				  <th>EventImg</th>
-				  <th>EventEmail</th>
-				  <th>EventPhoneNumber</th>
-				  <th>EventWebsiteAddress</th>
-				  <th>EventCategory</th>
-			</tr>";
-		//Create a loop to go through all of the records in the events table and post them on the webpage
-		while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
-		{
-
-			echo "<tr><td>";
-			echo $row['EventName'];
-			echo "</td><td>";
-			echo $row['EventDate'];
-			echo "</td><td>";
-			echo $row['EventTime'];
-			echo "</td><td>";
-			echo $row['EventLocation'];
-			echo "</td><td>";
-			echo $row['EventDescription'];
-			echo "</td><td>";
-			echo $row['EventCost'];
-			echo "</td><td>";
-			echo $row['EventSponsor'];
-			echo "</td><td>";
-			echo $row['EventSchool'];
-			echo "</td><td>";
-			echo $row['EventImg'];
-			echo "</td><td>";
-			echo $row['EventEmail'];
-			echo "</td><td>";
-			echo $row['EventPhoneNumber'];
-			echo "</td><td>";
-			echo $row['EventWebsiteAddress'];
-			echo "</td><td>";
-			echo $row['EventCategory'];
-			echo "</td></tr>";
-
-		}		
-			
-	echo "</table>"; */
-
-	/* } // end of main statement
-	 */
 
 	?>
 
 	
-	<div id = "footer">
+	<div class = "container text-center">
 			<p>&copy;2015, Uvents</p>
 			<p></p>
 	</div>
