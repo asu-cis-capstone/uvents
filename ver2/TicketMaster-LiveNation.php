@@ -102,14 +102,25 @@ Events Searched
 		$eventphone = $row['EventPhoneNumber'];
 		$eventweb = $row['EventWebsiteAddress'];
 		$eventcat = $row['EventCategory'];
-		
-		echo "<div id = 'event'>";	
-			echo"<p>$eventname</p>";
+	
+		echo "<div class = 'container'>";	
+			echo"<h1>$eventname</h1>";
 		echo "</div>";
 		
 		echo "<div class = 'container'>";
 			echo"<div class = 'jumbotron text-left'>";
-				echo"<p>$eventdes<p>";
+				echo"<img src='images/ticketmaster.jpg' alt='ticketmaster'/>";
+				echo"<h5><strong>Date: </strong>$eventdate</h5>";
+				echo"<h5><strong>Time: </strong>$eventtime</h5>";
+				echo"<h5><strong>Location: </strong>$eventloc</h5>";
+				echo"<h5><strong>Sponsored by: </strong>$eventsponsor</h5>";
+				echo"<h5><strong>Affiliated with: </strong>$eventschool</h5";
+				echo"<p></p>";
+				echo"<p><strong>Description: </strong>$eventdes</p>";
+				echo"<h5><strong>Email: </strong>$eventemail</h5>";
+				echo"<h5><strong>Phone Number: </strong>$eventphone</h5>";
+				echo"<h5><strong>Website: </strong>$eventweb</h5>";
+				
 			echo"</div>";
 		echo"</div>";
 	} // end while statement
