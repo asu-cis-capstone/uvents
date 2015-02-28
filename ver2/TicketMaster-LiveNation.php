@@ -115,7 +115,8 @@ Events Searched
 				echo"<h5><strong>Location: </strong>$eventloc</h5>";
 				echo"<h5><strong>Sponsored by: </strong>$eventsponsor</h5>";
 				echo"<h5><strong>Affiliated with: </strong>$eventschool</h5>";
-				echo"<p><strong>Description: </strong>$eventdes</p>";
+				echo"<p><strong>Description: </strong></p>";
+				echo"<p>$eventdes</p>";
 				echo"<h5><strong>Email: </strong>$eventemail</h5>";
 				echo"<h5><strong>Phone Number: </strong>$eventphone</h5>";
 				echo"<h5><strong>Website: </strong>$eventweb</h5>";
