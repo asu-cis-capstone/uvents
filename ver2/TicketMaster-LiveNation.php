@@ -15,8 +15,7 @@ Events Searched
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
     <!-- Link tag for CSS -->
-    <link type="text/css" rel="stylesheet" href="stylesheets/uss.css" />
-	<link href = "bootstrap/css/bootstrap.min.css" rel = "stylesheet">
+	<link href = "bootstrap/css/bootstrap-theme-flat.css" rel = "stylesheet">
 	<link href = "bootstrap/css/styles.css" rel = "stylesheet">
 	
 	<!-- Javascript tags -->
@@ -28,7 +27,7 @@ Events Searched
 	<link rel="icon" href="images/blueplane.png"/>
 	
     <!-- Web Page Title -->
-    <title>Ball So Hard</title>
+    <title>TicketMaster/LiveNation</title>
 	
   </head>
 
@@ -36,7 +35,7 @@ Events Searched
 	<div class = "navbar navbar-default navbar-static-top">
 		<div class = "container">
 		
-			<a href= "index.php" class = "navbar-brand">uvents</a>
+			<a href= "index.htm" class = "navbar-brand">uvents</a>
 			
 			<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
 				<span class = "icon-bar"></span>
@@ -46,7 +45,7 @@ Events Searched
 			
 			<div class = "collapse navbar-collapse navHeaderCollapse">
 				<ul class = "nav navbar-nav navbar-right">
-					<li class = "active"><a href = "index.php">Home</a></li>				
+					<li class = "active"><a href = "index.htm">Home</a></li>				
 					<li><a href = "aboutus.htm">About Us</a></li>
 					<li><a href = "clubs.htm">Clubs</a></li>	
 					<li class = "dropdown">

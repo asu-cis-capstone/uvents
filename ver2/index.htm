@@ -15,8 +15,8 @@ Home Page
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
     <!-- Link tag for CSS -->
-    <link type="text/css" rel="stylesheet" href="stylesheets/uss.css" />
 	<link href = "bootstrap/css/bootstrap-theme-flat.css" rel = "stylesheet">
+	<link href = "bootstrap/css/styles.css" rel = "stylesheet">
 
 	
 	<!-- Javascript tags -->
@@ -67,7 +67,6 @@ Home Page
 			</div>
 		</div>
 	</div>
-  
     
 	<div id="header">
 		<p>
@@ -83,15 +82,15 @@ Home Page
 			</a>
 			<p>Discover events around your university</p>
 			
-		<form method = "post" action = "eventlist.php">
+
+	<form method ="post" action = "eventlist.php" class="navbar-form navbar-left" role="search">
+        <div class="form-group">
 			<input type="hidden" name = "submitted" value = "true"/>
-
-				<label><input type = "text" name = "criteria"/></label>
-
-			<input type="submit" value = "Search" />
-			
-		</form>				
-
+			<input type="text" class="form-control" placeholder="Search" name = "criteria"/>
+        </div>
+			<button type="submit" class="btn btn-default">Submit</button>
+     </form>
+		
 
 		</div>
 	
