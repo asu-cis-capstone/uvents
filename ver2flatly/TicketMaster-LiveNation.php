@@ -45,8 +45,9 @@ Events Searched
 			
 			<div class = "collapse navbar-collapse navHeaderCollapse">
 				<ul class = "nav navbar-nav navbar-right">
-					<li class = "active"><a href = "index.htm">Home</a></li>				
-					<li><a href = "aboutus.htm">About Us</a></li>
+					<li><a href = "index.htm">Home</a></li>	
+					<li><a href = "login.htm">Login</a></li>							
+					<li><a href = "create.php">Create</a></li>				
 					<li><a href = "clubs.htm">Clubs</a></li>	
 					<li class = "dropdown">
 						<a href = "#" class = dropdown-toggle" data-toggle = "dropdown">Categories <b class = "caret"></b></a>	
@@ -60,20 +61,14 @@ Events Searched
 							<li><a href = "#">Greek Life</a></li>				
 						</ul>
 					</li>
-					<li><a href = "contact.htm">Contact Us</a></li>					
+					<li><a href = "contact.htm">Contact Us</a></li>
+					<li><a href = "aboutus.htm">About Us</a></li>							
 				</ul>
-			
 			</div>
+			
 		</div>
 	</div>
-  
-    
-	<div id="header">
-		<p>
-
-		</p>
-	</div>	
-
+	
 	<?php
 	//Only want to proceed entering the database if it is safe, that is, the page was submitted
 
@@ -91,7 +86,8 @@ Events Searched
 		//Store event columns in variables
 		$eventname = $row['EventName'];
 		$eventdate = $row['EventDate'];
-		$eventtime = $row['EventTime'];
+		$eventstart = $row['EventStartTime'];
+		$eventend = $row['EventEndTime'];
 		$eventloc = $row['EventLocation'];
 		$eventdes = $row['EventDescription'];
 		$eventcost = $row['EventCost'];
@@ -111,7 +107,7 @@ Events Searched
 			echo"<div class = 'jumbotron text-left'>";
 				echo"<img src='images/ticketmaster.jpg' alt='ticketmaster'/>";
 				echo"<h5><strong>Date: </strong>$eventdate</h5>";
-				echo"<h5><strong>Time: </strong>$eventtime</h5>";
+				echo"<h5><strong>Time: </strong>$eventstart-$eventend</h5>";
 				echo"<h5><strong>Location: </strong>$eventloc</h5>";
 				echo"<h5><strong>Sponsored by: </strong>$eventsponsor</h5>";
 				echo"<h5><strong>Affiliated with: </strong>$eventschool</h5>";

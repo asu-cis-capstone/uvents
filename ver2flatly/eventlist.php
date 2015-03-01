@@ -46,8 +46,9 @@ Events Searched
 			
 			<div class = "collapse navbar-collapse navHeaderCollapse">
 				<ul class = "nav navbar-nav navbar-right">
-					<li class = "active"><a href = "index.htm">Home</a></li>				
-					<li><a href = "aboutus.htm">About Us</a></li>
+					<li><a href = "index.htm">Home</a></li>	
+					<li><a href = "login.htm">Login</a></li>							
+					<li><a href = "create.php">Create</a></li>				
 					<li><a href = "clubs.htm">Clubs</a></li>	
 					<li class = "dropdown">
 						<a href = "#" class = dropdown-toggle" data-toggle = "dropdown">Categories <b class = "caret"></b></a>	
@@ -61,19 +62,13 @@ Events Searched
 							<li><a href = "#">Greek Life</a></li>				
 						</ul>
 					</li>
-					<li><a href = "contact.htm">Contact Us</a></li>					
+					<li><a href = "contact.htm">Contact Us</a></li>
+					<li><a href = "aboutus.htm">About Us</a></li>							
 				</ul>
-			
 			</div>
+			
 		</div>
 	</div>
-  
-    
-	<div id="header">
-		<p>
-
-		</p>
-	</div>	
 
 	<?php
 	//Only want to proceed entering the database if it is safe, that is, the page was submitted
@@ -87,6 +82,7 @@ Events Searched
 		$criteria = $_POST['criteria'];
 		$query = "SELECT * FROM	events WHERE EventName LIKE '%$criteria%'"; // Select statement to call data from events category based on the search criteria
 		$result =  mysqli_query($dbc, $query) or die('error obtaining data'); // Store the results in a variable unless there was in error in the process
+		$count = 0; // Store the number of times that an event is found with the user's input
 		
 		//Declare html div body
 		echo "<div class = 'container'>";
@@ -96,14 +92,23 @@ Events Searched
 			//Create a loop to go through all of the records in the events table and post them on the webpage
 			while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
 			{
-
+				$count++;
 				$eventname = $row['EventName']; // store the eventname value in a variable
 				$webpage =  str_replace("/", "-", str_replace(" ", "-", ltrim(rtrim($eventname)))); //format,trim, and store the value in a variable
 				
 				//Will grab the eventname based on the search input and create a hyperlink to it's proper page
-				echo "<p><a href = '$webpage.php' class = 'btn btn-success'>$eventname</a></p>"; 
+				echo "<p>$count <a href = '$webpage.php' class = 'btn btn-success'>$eventname</a></p>"; 
 			
-			} // end while statement				
+			} // end while statement	
+			
+			//Display this message if there were no results retrieved from the user's input
+
+			if($count == 0)
+			{
+				echo"<p><small>There were no events that matched your search input. Press the back button to return to the home page.</small></p>";
+				echo"<a href='index.htm' class='btn btn-danger'>Back</a>";
+			}
+			
 			echo "</div>";
 		echo "</div>";
 			
