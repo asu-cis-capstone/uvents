@@ -95,12 +95,14 @@ Events Searched
 				$count++;
 				$eventname = $row['EventName']; // store the eventname value in a variable
 				$webpage =  str_replace("/", "-", str_replace(" ", "-", ltrim(rtrim($eventname)))); //format,trim, and store the value in a variable
-				
-				//Will grab the eventname based on the search input and create a hyperlink to it's proper page
-				echo "<p>$count <a href = '$webpage.php' class = 'btn btn-success'>$eventname</a></p>"; 
 			
-			} // end while statement	
-			
+			echo"<div = class = 'container'>";
+				echo"<div class='input-group' style = 'padding:1%'>";
+					echo"<span class='input-group-addon input-success' style = 'background-color:#9db2ff'>-</span>";
+					echo"<button class='btn btn-primary' type='button'>$eventname</button>";
+				echo"</div>";
+			echo"</div>";
+			} // end while statement			
 			//Display this message if there were no results retrieved from the user's input
 
 			if($count == 0)
@@ -111,6 +113,7 @@ Events Searched
 			
 			echo "</div>";
 		echo "</div>";
+		
 			
 	} // end of if statement
 	?>
