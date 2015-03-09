@@ -39,7 +39,6 @@ Events Searched
 		<ul> 
 			<li><a href="aboutus.htm">About Us</a></li>
 			<li><a href="clubs.htm">Clubs</a></li>
-			<li><a href="login.htm">Login</a></li>
 			<li><a href="contact.htm">Contact Us</a></li>
 	</ul>
 	</div>

@@ -47,7 +47,6 @@ Events Searched
 			<div class = "collapse navbar-collapse navHeaderCollapse">
 				<ul class = "nav navbar-nav navbar-right">
 					<li><a href = "index.htm">Home</a></li>	
-					<li><a href = "login.htm">Login</a></li>							
 					<li><a href = "create.php">Create</a></li>				
 					<li><a href = "clubs.htm">Clubs</a></li>	
 					<li class = "dropdown">
