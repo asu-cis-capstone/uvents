@@ -53,10 +53,8 @@ Events Searched
                 </ul>
             </div>
         </div>
-    </header><!--/header-->
+    </header>
 			
-		</div>
-	</div>
 
 	<?php
 	//Only want to proceed entering the database if it is safe, that is, the page was submitted
@@ -73,7 +71,7 @@ Events Searched
 		$count = 0; // Store the number of times that an event is found with the user's input
 		
 		//Declare html div body
-		echo "<div class = 'container'>";
+		echo"<div class = 'container'>";
 		echo"<h1>Search Results:</h1>";
 			echo"<div class = 'jumbotron text-left'>";
 			
