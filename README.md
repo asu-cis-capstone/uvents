@@ -31,4 +31,6 @@ will allow the user to search and filter for events on and around campus.
 6. Design Contact Us Page
 
 v.0.1
+
+Access our video demo at: http://www.youtube.com/watch?v=ZoQPX3kJVFs
  
