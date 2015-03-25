@@ -1,12 +1,6 @@
 <!DOCTYPE html>
-
-<!-- 
-Clubs Page
--->
-
 <html lang="en">
-  	
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -30,10 +24,11 @@ Clubs Page
 		<!-- This meta tag allows the mobile version on mobile, tablet on tablet, desktop on desktop -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-</head>
+</head><!--/head-->
+<body>
 
-  <body>
-   <header class="navbar navbar-inverse navbar-fixed-top wet-asphalt" role="banner">
+
+    <header class="navbar navbar-inverse navbar-fixed-top wet-asphalt" role="banner">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -46,29 +41,37 @@ Clubs Page
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="index.html">Home</a></li>
-                   <li><a href="create.php">Create</a></li>
+                    <li><a href="index.html">Home</a></li>
+                   <li class="active"><a href="events.php">Events</a></li>
                     <li><a href="clubs.htm">Clubs</a></li>
-                    <li><a href="#">Categories</a></li>
+                    <li><a href="categories.html">Categories</a></li>
                 </ul>
             </div>
         </div>
     </header><!--/header-->
-	
-	<div class = "container">
-	
-		<div class = "jumbotron text-center">		
 
+    <footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2015 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">uvents</a>. All Rights Reserved.
+                </div>
+                <div class="col-sm-6">
+                    <ul class="pull-right">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Faq</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a id="gototop" class="gototop" href="#"><i class="icon-chevron-up"></i></a></li><!--#gototop-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
 
-		</div>
-	
-	</div>
-	
-	<div class = "container text-center">
-			<p>&copy;2015, Uvents</p>
-			<p></p>
-	</div>
- 
-	</body>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>
-
