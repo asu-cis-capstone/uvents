@@ -22,7 +22,8 @@
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 	
 		<!-- This meta tag allows the mobile version on mobile, tablet on tablet, desktop on desktop -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	
 
 </head><!--/head-->
 <body>
@@ -48,7 +49,8 @@
                 </ul>
             </div>
         </div>
-    </header><!--/header-->
+    </header><!--/header-->	
+	
 
     <footer id="footer" class="midnight-blue">
         <div class="container">
@@ -68,8 +70,9 @@
             </div>
         </div>
     </footer><!--/#footer-->
+	
+	
 
-    <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/main.js"></script>
