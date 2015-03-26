@@ -69,7 +69,7 @@ Events Searched
 		$query = "SELECT * FROM	events WHERE EventName LIKE '%$criteria%'"; // Select statement to call data from events category based on the search criteria
 		$result =  mysqli_query($dbc, $query) or die('error obtaining data'); // Store the results in a variable unless there was in error in the process
 		$count = 0; // Store the number of times that an event is found with the user's input
-		
+
 		//Declare html div body
 		echo"<div class = 'container'>";
 		echo"<h1>Search Results:</h1>";
@@ -91,7 +91,7 @@ Events Searched
 			if($count == 0)
 			{
 				echo"<p><small>There were no events that matched your search input. Press the back button to return to the home page.</small></p>";
-				echo"<a href='index.htm' class='btn btn-danger'>Back</a>";
+				echo"<a href='../index.html' class='btn btn-danger'>Back</a>";
 			}
 			
 			echo "</div>";
