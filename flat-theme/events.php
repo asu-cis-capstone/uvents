@@ -21,8 +21,14 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 	
+<<<<<<< HEAD
 	<!-- This meta tag allows the mobile version on mobile, tablet on tablet, desktop on desktop -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+=======
+		<!-- This meta tag allows the mobile version on mobile, tablet on tablet, desktop on desktop -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	
+>>>>>>> origin/master
 
         <meta name="description" content="">
         <meta name="HandheldFriendly" content="True">
@@ -56,6 +62,7 @@
                 </ul>
             </div>
         </div>
+<<<<<<< HEAD
     </header><!--/header-->
 	
        <div id="container">
@@ -321,6 +328,10 @@
 
 </br>	
 		
+=======
+    </header><!--/header-->	
+	
+>>>>>>> origin/master
 
         <!-- Add your site or application content here -->
         <script src="netflix-ui-master/js/app.js"></script>
@@ -347,8 +358,9 @@
             </div>
         </div>
     </footer><!--/#footer-->
+	
+	
 
-    <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/main.js"></script>
