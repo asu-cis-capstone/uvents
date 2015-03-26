@@ -21,12 +21,20 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 	
-		<!-- This meta tag allows the mobile version on mobile, tablet on tablet, desktop on desktop -->
+	<!-- This meta tag allows the mobile version on mobile, tablet on tablet, desktop on desktop -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0"> 
+        <link rel="apple-touch-icon" href="img/branding/netflix.png"/>
+        
+        <!-- styles -->
+        <link rel="stylesheet" href="netflix-ui-master/css/main.css">
+	
 </head><!--/head-->
 <body>
-
 
     <header class="navbar navbar-inverse navbar-fixed-top wet-asphalt" role="banner">
         <div class="container">
@@ -49,7 +57,278 @@
             </div>
         </div>
     </header><!--/header-->
+	
+       <div id="container">
+            <div id="header">               
+               <div class="logo"> <img src="img/branding/netflix_logo.gif"/> </div>               
+            </div>
+            <div id="main" role="main">
+                <!-- Movie browser -->
+                <div id="browser">
+                    
+                    <!-- Category -->
+                    <div class="categoryTitle"><h1>9:00 events</h1></div>
+                    <div class="category">
+                        <ul class="categoryRow clearfix">
+                            <li class="movie">
+								<div class="portfolio-item">
+									<img class="img-responsive" src="images/poster1.jpg" width="150" height="214"  alt="">
+										<div class="overlay">
+											<a class="preview btn btn-danger" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
+                                        </div>
+                                 </div>                                   
+                            </li>
+                            <li class="movie">
+								<div class="portfolio-item">
+									<img class="img-responsive" src="images/poster2.jpg" width="150" height="214"  alt="">
+										<div class="overlay">
+											<a class="preview btn btn-danger" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
+                                        </div>
+                                 </div>                                   
+                            </li>
+                            <li class="movie">
+								<div class="portfolio-item">
+									<img class="img-responsive" src="images/poster4.jpg" width="150" height="214"  alt="">
+										<div class="overlay">
+											<a class="preview btn btn-danger" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
+                                        </div>
+                                 </div>                                   
+                            </li>
+                            <li class="movie">
+								<div class="portfolio-item">
+									<img class="img-responsive" src="images/poster5.jpg" width="150" height="214"  alt="">
+										<div class="overlay">
+											<a class="preview btn btn-danger" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
+                                        </div>
+                                 </div>                                   
+                            </li>
+                            <li class="movie">
+								<div class="portfolio-item">
+									<img class="img-responsive" src="images/poster2.jpg" width="150" height="214"  alt="">
+										<div class="overlay">
+											<a class="preview btn btn-danger" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
+                                        </div>
+                                 </div>                                   
+                            </li>
+                            <li class="movie">
+								<div class="portfolio-item">
+									<img class="img-responsive" src="images/poster7.jpg" width="150" height="214"  alt="">
+										<div class="overlay">
+											<a class="preview btn btn-danger" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
+                                        </div>
+                                 </div>                                   
+                            </li>
+                            <li class="movie">
+								<div class="portfolio-item">
+									<img class="img-responsive" src="images/poster1.jpg" width="150" height="214"  alt="">
+										<div class="overlay">
+											<a class="preview btn btn-danger" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
+                                        </div>
+                                 </div>                                   
+                            </li>
+                            <li class="movie">
+								<div class="portfolio-item">
+									<img class="img-responsive" src="images/poster9.jpg" width="150" height="214"  alt="">
+										<div class="overlay">
+											<a class="preview btn btn-danger" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
+                                        </div>
+                                 </div>                                   
+                            </li>
+                            <li class="movie">
+								<div class="portfolio-item">
+									<img class="img-responsive" src="images/poster10.jpg" width="150" height="214"  alt="">
+										<div class="overlay">
+											<a class="preview btn btn-danger" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
+                                        </div>
+                                 </div>                                   
+                            </li>
+                        </ul>
+                    </div>   
 
+                   <div class="categoryTitle"><h1>10:00 events</h1></div>
+                    <div class="category">
+						<!--<marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">		-->			
+                        <ul class="categoryRow clearfix">
+
+                             <li class="movie">
+   
+                                        <div class="portfolio-item">
+                                                <img class="img-responsive" src="images/poster2.jpg"  alt="">
+                                                <div class="overlay">
+                                                    <a class="preview btn btn-danger" title="Malesuada fames ac turpis egestas" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
+                                                </div>
+                                        </div>
+                                                                           
+                            </li>
+                            <li class="movie">
+                                <span><img src="images/poster10.jpg" width="150" height="214"/></span>
+                            </li>
+                            <li class="movie">
+                                <span><img src="images/poster6.jpg" width="150" height="214"/></span>
+                            </li>
+                            <li class="movie">
+                                <span><img src="images/poster2.jpg" width="150" height="214"/></span>
+                            </li>
+                            <li class="movie">
+                                <span><img src="images/poster8.jpg" width="150" height="214"  /></span>                                    
+                            </li>
+                            <li class="movie">
+                                <span><img src="images/poster5.jpg" width="150" height="214"/></span>
+                            </li>
+                            <li class="movie">
+                                <span><img src="images/poster1.jpg" width="150" height="214"/></span>
+                            </li>
+                            <li class="movie">
+                                <span><img src="images/poster4.jpg" width="150" height="214"/></span>
+                            </li>
+                            <li class="movie">
+                                <span><img src="images/poster3.jpg" width="150" height="214"/></span>
+                            </li>
+							
+                        </ul>
+						<!--</marquee> -->
+						
+                    </div>   						
+                </div>    
+            </div>        
+
+                    <div class="categoryTitle"><h1>11:00 events</h1></div>
+                    <div class="category">
+                        <ul class="categoryRow clearfix">
+                            <li class="movie">
+								<div class="portfolio-item">
+									<img class="img-responsive" src="images/poster11.jpg" width="150" height="214"  alt="">
+										<div class="overlay">
+											<a class="preview btn btn-danger" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
+                                        </div>
+                                 </div>                                   
+                            </li>
+                            <li class="movie">
+								<div class="portfolio-item">
+									<img class="img-responsive" src="images/poster12.jpg" width="150" height="214"  alt="">
+										<div class="overlay">
+											<a class="preview btn btn-danger" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
+                                        </div>
+                                 </div>                                   
+                            </li>
+                            <li class="movie">
+								<div class="portfolio-item">
+									<img class="img-responsive" src="images/poster13.jpg" width="150" height="214"  alt="">
+										<div class="overlay">
+											<a class="preview btn btn-danger" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
+                                        </div>
+                                 </div>                                   
+                            </li>
+                            <li class="movie">
+								<div class="portfolio-item">
+									<img class="img-responsive" src="images/poster14.jpg" width="150" height="214"  alt="">
+										<div class="overlay">
+											<a class="preview btn btn-danger" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
+                                        </div>
+                                 </div>                                   
+                            </li>
+                            <li class="movie">
+								<div class="portfolio-item">
+									<img class="img-responsive" src="images/poster15.jpg" width="150" height="214"  alt="">
+										<div class="overlay">
+											<a class="preview btn btn-danger" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
+                                        </div>
+                                 </div>                                   
+                            </li>
+                            <li class="movie">
+								<div class="portfolio-item">
+									<img class="img-responsive" src="images/poster16.jpg" width="150" height="214"  alt="">
+										<div class="overlay">
+											<a class="preview btn btn-danger" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
+                                        </div>
+                                 </div>                                   
+                            </li>
+                            <li class="movie">
+								<div class="portfolio-item">
+									<img class="img-responsive" src="images/poster17.jpg" width="150" height="214"  alt="">
+										<div class="overlay">
+											<a class="preview btn btn-danger" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
+                                        </div>
+                                 </div>                                   
+                            </li>
+                            <li class="movie">
+								<div class="portfolio-item">
+									<img class="img-responsive" src="images/poster18.jpg" width="150" height="214"  alt="">
+										<div class="overlay">
+											<a class="preview btn btn-danger" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
+                                        </div>
+                                 </div>                                   
+                            </li>
+                            <li class="movie">
+								<div class="portfolio-item">
+									<img class="img-responsive" src="images/poster19.jpg" width="150" height="214"  alt="">
+										<div class="overlay">
+											<a class="preview btn btn-danger" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
+                                        </div>
+                                 </div>                                   
+                            </li>
+                        </ul>
+                    </div>   
+
+                   <div class="categoryTitle"><h1>12:00 events</h1></div>
+                    <div class="category">
+						<!--<marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">		-->			
+                        <ul class="categoryRow clearfix">
+
+                             <li class="movie">
+   
+                                        <div class="portfolio-item">
+                                                <img class="img-responsive" src="images/poster2.jpg"  alt="">
+                                                <div class="overlay">
+                                                    <a class="preview btn btn-danger" title="Malesuada fames ac turpis egestas" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
+                                                </div>
+                                        </div>
+                                                                           
+                            </li>
+                            <li class="movie">
+                                <span><img src="images/poster10.jpg" width="150" height="214"/></span>
+                            </li>
+                            <li class="movie">
+                                <span><img src="images/poster6.jpg" width="150" height="214"/></span>
+                            </li>
+                            <li class="movie">
+                                <span><img src="images/poster2.jpg" width="150" height="214"/></span>
+                            </li>
+                            <li class="movie">
+                                <span><img src="images/poster8.jpg" width="150" height="214"  /></span>                                    
+                            </li>
+                            <li class="movie">
+                                <span><img src="images/poster5.jpg" width="150" height="214"/></span>
+                            </li>
+                            <li class="movie">
+                                <span><img src="images/poster1.jpg" width="150" height="214"/></span>
+                            </li>
+                            <li class="movie">
+                                <span><img src="images/poster4.jpg" width="150" height="214"/></span>
+                            </li>
+                            <li class="movie">
+                                <span><img src="images/poster3.jpg" width="150" height="214"/></span>
+                            </li>
+							
+                        </ul>
+						<!--</marquee> -->
+						
+                    </div>   						
+                </div>    
+            </div>
+			
+        </div> <!--! end of #container --> 
+
+</br>	
+		
+
+        <!-- Add your site or application content here -->
+        <script src="netflix-ui-master/js/app.js"></script>
+        <script>  
+            //Kick start app
+            App.startup();
+        </script> 
+		
     <footer id="footer" class="midnight-blue">
         <div class="container">
             <div class="row">
