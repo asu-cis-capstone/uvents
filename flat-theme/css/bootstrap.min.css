@@ -157,15 +157,21 @@
  
  
  /*Button 8 */
- .btn-button8{color:#fff;background-color:#13bbdd;border-color:13ddbc}
- .btn-button8:hover,.btn-button8:focus,.btn-button8:active,.btn-button8.active,.open .dropdown-toggle.btn-button8{color:#fff;background-color:#85ebf4;border-color:13ddbc}
+ .btn-button8{
+background-image:
+	url("images/search.jpg"); 
+ background-size: auto;
+ width: 50px;
+ height: 50px;
+ }
+ .btn-button8:hover,.btn-button8:focus,.btn-button8:active,.btn-button8.active,.open .dropdown-toggle.btn-button8{background-image:url("images/search.jpg");}
  .btn-button8:active,.btn-button8.active,.open .dropdown-toggle.btn-button8{background-image:none}
  .btn-button8.disabled,.btn-button8[disabled],fieldset[disabled] 
  .btn-button8,.btn-button8.disabled:hover,.btn-button8[disabled]:hover,fieldset[disabled] 
  .btn-button8:hover,.btn-button8.disabled:focus,.btn-button8[disabled]:focus,fieldset[disabled] 
  .btn-button8:focus,.btn-button8.disabled:active,.btn-button8[disabled]:active,fieldset[disabled] 
  .btn-button8:active,.btn-button8.disabled.active,.btn-button8[disabled].active,fieldset[disabled] 
- .btn-button8.active{background-color:#13bbdd;border-color:13ddbc} 
+ .btn-button8.active{background-image:url("images/search.jpg");} 
  
  
  /*Button 9 */
