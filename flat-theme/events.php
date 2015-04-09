@@ -37,7 +37,7 @@
         <link rel="apple-touch-icon" href="img/branding/netflix.png"/>
         
         <!-- styles -->
-        <link rel="stylesheet" href="netflix-ui-master/css/main.css">
+        <link rel="stylesheet" href="css/netflix.css">
 	
 </head><!--/head-->
 <body>
@@ -79,7 +79,7 @@
                         <ul class="categoryRow clearfix">
                             <li class="movie">
 								<div class="portfolio-item">
-									<img class="img-responsive" src="images/poster1.jpg" width="150" height="214"  alt="">
+									<img class="img-responsive" src="images/business.jpg" width="150" height="150"  alt="">
 										<div class="overlay">
 											<a class="preview btn btn-danger" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
                                         </div>
@@ -87,7 +87,7 @@
                             </li>
                             <li class="movie">
 								<div class="portfolio-item">
-									<img class="img-responsive" src="images/poster2.jpg" width="150" height="214"  alt="">
+									<img class="img-responsive" src="images/career.jpg" width="150" height="214"  alt="">
 										<div class="overlay">
 											<a class="preview btn btn-danger" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
                                         </div>
@@ -95,7 +95,7 @@
                             </li>
                             <li class="movie">
 								<div class="portfolio-item">
-									<img class="img-responsive" src="images/poster4.jpg" width="150" height="214"  alt="">
+									<img class="img-responsive" src="images/engineering.png" width="150" height="214"  alt="">
 										<div class="overlay">
 											<a class="preview btn btn-danger" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
                                         </div>
@@ -103,7 +103,7 @@
                             </li>
                             <li class="movie">
 								<div class="portfolio-item">
-									<img class="img-responsive" src="images/poster5.jpg" width="150" height="214"  alt="">
+									<img class="img-responsive" src="images/design.jpg" width="150" height="214"  alt="">
 										<div class="overlay">
 											<a class="preview btn btn-danger" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
                                         </div>
@@ -111,7 +111,7 @@
                             </li>
                             <li class="movie">
 								<div class="portfolio-item">
-									<img class="img-responsive" src="images/poster2.jpg" width="150" height="214"  alt="">
+									<img class="img-responsive" src="images/food.jpg" width="150" height="214"  alt="">
 										<div class="overlay">
 											<a class="preview btn btn-danger" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
                                         </div>
@@ -119,7 +119,7 @@
                             </li>
                             <li class="movie">
 								<div class="portfolio-item">
-									<img class="img-responsive" src="images/poster7.jpg" width="150" height="214"  alt="">
+									<img class="img-responsive" src="images/bars.jpg" width="150" height="214"  alt="">
 										<div class="overlay">
 											<a class="preview btn btn-danger" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
                                         </div>
@@ -127,7 +127,7 @@
                             </li>
                             <li class="movie">
 								<div class="portfolio-item">
-									<img class="img-responsive" src="images/poster1.jpg" width="150" height="214"  alt="">
+									<img class="img-responsive" src="images/greek.jpg" width="150" height="214"  alt="">
 										<div class="overlay">
 											<a class="preview btn btn-danger" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
                                         </div>
@@ -135,7 +135,7 @@
                             </li>
                             <li class="movie">
 								<div class="portfolio-item">
-									<img class="img-responsive" src="images/poster9.jpg" width="150" height="214"  alt="">
+									<img class="img-responsive" src="images/business.jpg" width="150" height="214"  alt="">
 										<div class="overlay">
 											<a class="preview btn btn-danger" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
                                         </div>
@@ -143,7 +143,7 @@
                             </li>
                             <li class="movie">
 								<div class="portfolio-item">
-									<img class="img-responsive" src="images/poster10.jpg" width="150" height="214"  alt="">
+									<img class="img-responsive" src="images/engineering.png" width="150" height="214"  alt="">
 										<div class="overlay">
 											<a class="preview btn btn-danger" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
                                         </div>
