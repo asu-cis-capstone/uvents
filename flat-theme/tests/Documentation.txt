@@ -1,0 +1,19 @@
+UventsLogoClickEvent- user clicks on uvents logo and will be redirected to home page on any of the web pages that have a uvents logo.
+
+SearchEmptyValue- user will leave the search bar empty and submit their input. The user will see a list of all of the events in the database.
+
+SearchSingleCharacter- user will input a single character from the English alphabet into the search bar. The user will get a list of any events that match the criteria. If there are no event names that match the criteria, a message will be displayed to user stating this and a back button to go back to the home page.
+
+SearchNumericalValue- user will input a numerical value into the search toolbar and get a message stating that there were no search results in the database, along with a button.
+
+SearchSpecialCharacterValue- user will input a special character into the search toolbar. The user should get no results displayed along with a message stating this.
+
+SearchLongString- user will input a long string. The user should get no results displayed along with a message stating this.
+
+SlideBarClickEvent- user will press the circlular buttons found under the search bar to navigate between the pictures and video of the slidebar.
+
+CategoriesClickEvents- user will click on each category picture found on the categories page and be redirected to a list of events that fall under that category.
+
+DisplayClubBanner- user will click on club and be displayed a club banner.
+
+ClubFilter- user will click on club filters and be displayed any clubs that meet that criteria.
