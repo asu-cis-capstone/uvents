@@ -43,7 +43,9 @@ Events Searched
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../index.html">uvents</a>
+                <a class="navbar-brand" href="../index.html">
+								<img class="img-responsive" src="../images/LogoDone2.png" width = "110" height = "41"alt="">
+				</a>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">

@@ -6,7 +6,7 @@ Events Searched
 
 <html lang="en">
   	
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -31,9 +31,10 @@ Events Searched
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head><!--/head-->
-
 <body>
-	<header class="navbar navbar-inverse navbar-fixed-top wet-asphalt" role="banner">
+
+
+    <header class="navbar navbar-inverse navbar-fixed-top wet-asphalt" role="banner">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -56,54 +57,60 @@ Events Searched
             </div>
         </div>
     </header>
-			
-
+	
 	<?php
 	//Only want to proceed entering the database if it is safe, that is, the page was submitted
-	if (isset($_POST['submitted'])) 
+
+	/* if (isset($_POST['submitted'])) { */
+
+	//Call on this file to connect to database
+	include('../local-connect.php');
+
+	//Define variables
+	$query = "SELECT * FROM	events WHERE EventId = 13 "; // Select statement to call data from events category based on the search criteria
+	$result =  mysqli_query($dbc, $query) or die('error obtaining data'); // Store the results in a variable unless there was in error in the process
+	
+	while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
 	{
-
-		//Call on this file to connect to database
-		include('../local-connect.php');
-
-		//Define variables
-		$criteria = $_POST['criteria'];
-		$query = "SELECT * FROM	events WHERE EventName LIKE '%$criteria%'"; // Select statement to call data from events category based on the search criteria
-		$result =  mysqli_query($dbc, $query) or die('error obtaining data'); // Store the results in a variable unless there was in error in the process
-		$count = 0; // Store the number of times that an event is found with the user's input
-
-		//Declare html div body
-		echo"<div class = 'container'>";
-		echo"<h1>Search Results:</h1>";
-			echo"<div class = 'jumbotron text-left'>";
-			
-			//Create a loop to go through all of the records in the events table and post them on the webpage
-			while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
-			{
-				$count++;
-				$eventname = $row['EventName']; // store the eventname value in a variable
-				$webpage =  str_replace("/", "-", str_replace(" ", "-", ltrim(rtrim($eventname)))); //format,trim, and store the value in a variable
-			
-			echo"<div = class = 'container'>";
-				echo "<p>&#8226<a href = '$webpage.php'>$eventname</a></p>";
-			echo"</div>";
-			} // end while statement			
-			//Display this message if there were no results retrieved from the user's input
-
-			if($count == 0)
-			{
-				echo"<p><small>There were no events that matched your search input. Press the back button to return to the home page.</small></p>";
-				echo"<a href='../index.html' class='btn btn-danger'>Back</a>";
-			}
-			
-			echo "</div>";
+		//Store event columns in variables
+		$eventname = $row['EventName'];
+		$eventdate = $row['EventDate'];
+		$eventstart = $row['EventStartTime'];
+		$eventend = $row['EventEndTime'];
+		$eventloc = $row['EventLocation'];
+		$eventdes = $row['EventDescription'];
+		$eventcost = $row['EventCost'];
+		$eventsponsor = $row['EventSponsor'];
+		$eventschool = $row['EventSchool'];
+		$eventimg = $row['EventImg'];
+		$eventemail = $row['EventEmail'];
+		$eventphone = $row['EventPhoneNumber'];
+		$eventweb = $row['EventWebsiteAddress'];
+		$eventcat = $row['EventCategory'];
+	
+		echo "<div class = 'container'>";	
+			echo"<h1>$eventname</h1>";
 		echo "</div>";
 		
-			
-	} // end of if statement
+		echo "<div class = 'container'>";
+			echo"<div class = 'jumbotron text-left'>";
+				echo"<img src='../images/disc.jpg' alt='ticketmaster' height='45%' width='45%'/>";
+				echo"<h5><strong>Date: </strong>$eventdate</h5>";
+				echo"<h5><strong>Time: </strong>$eventstart-$eventend</h5>";
+				echo"<h5><strong>Location: </strong>$eventloc</h5>";
+				echo"<h5><strong>Sponsored by: </strong>$eventsponsor</h5>";
+				echo"<h5><strong>Affiliated with: </strong>$eventschool</h5>";
+				echo"<p><strong>Description: </strong></p>";
+				echo"<p>$eventdes</p>";
+				echo"<h5><strong>Email: </strong>$eventemail</h5>";
+				echo"<h5><strong>Phone Number: </strong>$eventphone</h5>";
+				echo"<h5><strong>Website: </strong>$eventweb</h5>";	
+			echo"</div>";
+		echo"</div>";
+	} // end while statement
+
 	?>
 
-	
 	
 	<div class = "container text-center">
 			<p>&copy;2015, Uvents</p>
