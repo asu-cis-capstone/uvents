@@ -1,0 +1,1 @@
+Used Selenium IDE for FireFox Browser to run test automated test cases
