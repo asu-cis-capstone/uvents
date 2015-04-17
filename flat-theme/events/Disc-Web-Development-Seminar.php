@@ -94,7 +94,7 @@ Events Searched
 		
 		echo "<div class = 'container'>";
 			echo"<div class = 'jumbotron text-left'>";
-				echo"<img src='../images/disc.jpg' alt='ticketmaster' height='45%' width='45%'/>";
+				echo"<img src='../$eventimg' alt='$eventimg' height='45%' width='45%'/>";
 				echo"<h5><strong>Date: </strong>$eventdate</h5>";
 				echo"<h5><strong>Time: </strong>$eventstart-$eventend</h5>";
 				echo"<h5><strong>Location: </strong>$eventloc</h5>";

@@ -75,7 +75,7 @@ Events Searched
 		//Declare html div body
 		echo"<div class = 'container'>";
 		echo"<h1>Search Results:</h1>";
-			echo"<div class = 'jumbotron text-left'>";
+			
 			
 			//Create a loop to go through all of the records in the events table and post them on the webpage
 			while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
@@ -83,10 +83,46 @@ Events Searched
 				$count++;
 				$eventname = $row['EventName']; // store the eventname value in a variable
 				$webpage =  str_replace("/", "-", str_replace(" ", "-", ltrim(rtrim($eventname)))); //format,trim, and store the value in a variable
+				
+				$eventdate = $row['EventDate'];
+				$eventstart = $row['EventStartTime'];
+				$eventend = $row['EventEndTime'];
+				$eventloc = $row['EventLocation'];
+				$eventdes = $row['EventDescription'];
+				$eventcost = $row['EventCost'];
+				$eventsponsor = $row['EventSponsor'];
+				$eventschool = $row['EventSchool'];
+				$eventimg = $row['EventImg'];
+				$eventemail = $row['EventEmail'];
+				$eventphone = $row['EventPhoneNumber'];
+				$eventweb = $row['EventWebsiteAddress'];
+				$eventcat = $row['EventCategory'];
+				
+				
+			echo"<div class = 'jumbotron text-left'><a href = '$webpage.php'>";
+			echo"<form class='form-horizontal'>";
+			echo"<fieldset>";
+				echo"<div class='form-group'>";
+					
+				echo"<div class='col-lg-4'>";
+					echo"<span class='label label-default'>$eventcat</span>";
+					echo "<label>$eventname</label>";
+
+				echo"</div>";
+
+
+					echo"<div class='col-lg-6'>";	
+						echo"<label>$eventdes</label>";
+					echo"</div>";	
+																echo"<img src='../$eventimg' alt='$eventimg' height='25%' width='25%'/>";
+
+					
+				echo"</div>";
+			echo"</fieldset>";
+			echo"</form>";
+				
 			
-			echo"<div = class = 'container'>";
-				echo "<p>&#8226<a href = '$webpage.php'>$eventname</a></p>";
-			echo"</div>";
+			echo "</div></a>";
 			} // end while statement			
 			//Display this message if there were no results retrieved from the user's input
 
@@ -96,7 +132,7 @@ Events Searched
 				echo"<a href='../index.html' class='btn btn-danger'>Back</a>";
 			}
 			
-			echo "</div>";
+			
 		echo "</div>";
 		
 			
