@@ -52,73 +52,29 @@
         </div>
     </header><!--/header-->
 	
+<style>
+body {margin: 0px; }
+#content{ position:absolute;  top: 80px; padding-top: 27.2%;  width: 100%; color: #FFF; text-align: center;}
+#content p{font-size: 130%;}
+#bg{width: 100%; }
+#top_layer{ position:absolute;  top: 80px; width: 100%; padding-bottom: 56.2%; color: #FFF; background-color: rgba(0, 0, 0, .5); text-align: center; font-size 1%;}
+</style>
 
-	
-    <section id="main-slider" class="no-margin">
-        <div class="carousel slide wet-asphalt">
-            <ol class="carousel-indicators">
-                <li data-target="#main-slider" data-slide-to="0" class="active"></li>
-                <li data-target="#main-slider" data-slide-to="1"></li>
-                <li data-target="#main-slider" data-slide-to="2"></li>
-            </ol>
-			
 
-            <div class="carousel-inner">
-				<div class="item active" style ="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ),url('images/tempeback.jpg'); background-size: cover;">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="carousel-content centered">
-									<div class = "container text-center">
-									<h2 class="animation animated-item-1 " >Discover events around your university</h2>
-										<form method="post" action="events/eventlist.php" class="navbar-form navbar-center" role="search">
-											<div class="form-group">
-												<input type="hidden" name="submitted" value="true">
-												<input type="text" class="form-control" placeholder="Search" name="criteria">
-											</div>
-											<button type="submit" class="btn btn-primary">Submit</button>
-										</form>
-									</div>	
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-					
-                </div><!--/.item-->
 
-				<div class="item" style ="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ),url('images/sundevilstadiumnight.jpg'); background-size: cover;">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="carousel-content center centered">
-								<h2 class="animation animated-item-1 " >Home of the Sun Devils</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--/.item-->
-				
-                <div class="item" style="background-image: url(images/slider/.jpg)">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="carousel-content centered">
-                                </div>
-                            </div>
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="centered">
-                                    <div class="embed-container">
-                                        <iframe src="//player.vimeo.com/video/69421653?title=0&amp;byline=0&amp;portrait=0&amp;color=a22c2f" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--/.item-->
-            </div><!--/.carousel-inner-->
-        </div><!--/.carousel-->
-    </section><!--/#main-slider-->
+<div id = "bg_container">
+	<video id= "bg" autoplay="true" muted ="true" loop="true"> 
+		<source src ="video/asuvid.mp4" type="video/mp4">
+		<source src ="video/asuvid.webm" type="video/webm"/>
+	</video>
+</div>
 
+<div id ="top_layer">
+</div>	
+
+<div id ="content">
+<p>Discover Events Around Your University<p>
+</div>	
    
     <section id="recent-works">
         <div class="container">
