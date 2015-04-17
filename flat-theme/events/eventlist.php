@@ -83,7 +83,8 @@ Events Searched
 						echo "<h2 class=\"lead\"><strong class=\"text-danger\">$count</strong> results were found for the search for <strong class=\"text-danger\">$criteria</strong></h2>";	
 					}
 				
-					elseif ($criteria == '') {
+					elseif ($criteria == '') 
+					{
 						echo "<h1>Search Results</h1>";
 						echo "<h2 class=\"lead\"><strong class=\"text-danger\"></strong>Here are all the events in your area<strong class=\"text-danger\">$criteria</strong></h2>";											
 					}
@@ -98,7 +99,7 @@ Events Searched
 				$webpage =  str_replace("/", "-", str_replace(" ", "-", ltrim(rtrim($eventname)))); //format,trim, and store the value in a variable
 				
 				$eventdate = $row['EventDate'];
-				$eventstart = $row['EventTime'];
+				$eventstart = $row['EventStartTime'];
 				$eventend = $row['EventEndTime'];
 				$eventloc = $row['EventLocation'];
 				$eventdes = $row['EventDescription'];
@@ -110,6 +111,9 @@ Events Searched
 				$eventphone = $row['EventPhoneNumber'];
 				$eventweb = $row['EventWebsiteAddress'];
 				$eventcat = $row['EventCategory'];
+				//holds the color of the text-font
+				$textcolor = 'text-default';
+				$glyphicon = 'glyphicon glyphicon-tags';
 				
 				echo "<div class=\"container\"><a href = $webpage.php'>";
 
@@ -123,26 +127,32 @@ Events Searched
 								elseif($eventcat == 'Engineering')								
 								{
 									echo  "<a href=\"#\" title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"../images/engineering.png\" alt=\"\" /></a>";
+									$textcolor = 'text-primary';
 								}
 								elseif($eventcat == 'Design')								
 								{
 									echo  "<a href=\"#\" title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"../images/design.jpg\" alt=\"\" /></a>";
+									$textcolor = 'text-danger';
 								}
 								elseif($eventcat == 'Career')								
 								{
 									echo  "<a href=\"#\" title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"../images/career.jpg\" alt=\"\" /></a>";
+									$textcolor = 'text-success';
 								}
-								elseif($eventcat == 'Free Food')								
+								elseif($eventcat == 'Food')								
 								{
 									echo  "<a href=\"#\" title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"../images/food.jpg\" alt=\"\" /></a>";
+									$textcolor = 'text-info';
 								}
 								elseif($eventcat == 'Bars and Restaurants')								
 								{
 									echo  "<a href=\"#\" title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"../images/bars.jpg\" alt=\"\" /></a>";
+									$textcolor = 'text-warning';
 								}
 								elseif($eventcat == 'Greek Life')								
 								{
 									echo  "<a href=\"#\" title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"../images/greek.jpg\" alt=\"\" /></a>";
+									$textcolor = 'text-info';
 								}
 								// If there is no categories in the database, no image will be displayed. 
 								else
@@ -154,14 +164,15 @@ Events Searched
 							echo "<div class=\"col-xs-12 col-sm-12 col-md-2\">";
 								echo "<ul class=\"meta-search\">";
 									echo "<li><i class=\"glyphicon glyphicon-calendar\"></i> <span>$eventdate</span></li>";
-									echo "<li><i class=\"glyphicon glyphicon-time\"></i> <span>$eventstart</span></li>";
-									echo "<li><i class=\"glyphicon glyphicon-tags\"></i> <span>$eventcat</span></li>";
+									echo "<li><i class=\"glyphicon glyphicon-time\"></i> <span>$eventstart - $eventend</span></li>";
+									echo "<li><i class=\"$glyphicon\"></i> <span class = '$textcolor'>$eventcat</span></li>";
+									
 								echo "</ul>";
 							echo "</div>";
 							echo "<div class=\"col-xs-12 col-sm-12 col-md-7 excerpet\">";
 								echo "<h3>$eventname</h3>";
 								echo "<p>$eventdes</p>";						
-								echo "<span class=\"plus\"><a href=\"#\" title=\"Lorem ipsum\"><i class=\"glyphicon glyphicon-plus\"></i></a></span>";
+								echo "<span class=\"plus\" color = 'red'><a href=\"#\" title=\"Lorem ipsum\"><i class=\"glyphicon glyphicon-plus\"></i></a></span>";
 							echo "</div>";
 							echo "<span class=\"clearfix borda\"></span>";
 						echo "</article>";
