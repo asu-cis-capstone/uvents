@@ -172,7 +172,7 @@ Events Searched
 							echo "<div class=\"col-xs-12 col-sm-12 col-md-7 excerpet\">";
 								echo "<h3>$eventname</h3>";
 								echo "<p>$eventdes</p>";						
-								echo "<span class=\"plus\" color = 'red'><a href=\"#\" title=\"Lorem ipsum\"><i class=\"glyphicon glyphicon-plus\"></i></a></span>";
+								echo "<span class=\"plus\"><a href=\"#\" title=\"Lorem ipsum\"><i class=\"glyphicon glyphicon-plus\"></i></a></span>";
 							echo "</div>";
 							echo "<span class=\"clearfix borda\"></span>";
 						echo "</article>";
