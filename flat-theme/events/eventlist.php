@@ -77,17 +77,8 @@ Events Searched
 		//Declare html div body
 			echo "<div class=\"container\"><a href = $webpage.php'>";		
 				echo "<hgroup class=\"mb20\">";
-					if ($criteria != '')
-					{
-						echo "<h1>Search Results</h1>";
-						echo "<h2 class=\"lead\"><strong class=\"text-danger\">$count</strong> results were found for the search for <strong class=\"text-danger\">$criteria</strong></h2>";	
-					}
-				
-					elseif ($criteria == '') {
-						echo "<h1>Search Results</h1>";
-						echo "<h2 class=\"lead\"><strong class=\"text-danger\"></strong>Here are all the events in your area<strong class=\"text-danger\">$criteria</strong></h2>";											
-					}
-					
+					echo "<h1>Search Results</h1>";
+					echo "<h2 class=\"lead\"><strong class=\"text-danger\">$count</strong> results were found for the search for <strong class=\"text-danger\">$criteria</strong></h2>";								
 				echo "</hgroup>";			
 			echo "</div>";		
 			//Create a loop to go through all of the records in the events table and post them on the webpage
@@ -115,41 +106,8 @@ Events Searched
 
 					echo "<section class=\"col-xs-12 col-sm-6 col-md-12\">";
 						echo "<article class=\"search-result row\">";
-							echo "<div class=\"col-xs-12 col-sm-12 col-md-3\">";			
-								if($eventcat == 'Business')								
-								{
-									echo  "<a href=\"#\" title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"../images/business.png\" alt=\"\" /></a>";
-								}
-								elseif($eventcat == 'Engineering')								
-								{
-									echo  "<a href=\"#\" title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"../images/engineering.png\" alt=\"\" /></a>";
-								}
-								elseif($eventcat == 'Design')								
-								{
-									echo  "<a href=\"#\" title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"../images/design.jpg\" alt=\"\" /></a>";
-								}
-								elseif($eventcat == 'Career')								
-								{
-									echo  "<a href=\"#\" title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"../images/career.jpg\" alt=\"\" /></a>";
-								}
-								elseif($eventcat == 'Free Food')								
-								{
-									echo  "<a href=\"#\" title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"../images/food.jpg\" alt=\"\" /></a>";
-								}
-								elseif($eventcat == 'Bars and Restaurants')								
-								{
-									echo  "<a href=\"#\" title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"../images/bars.jpg\" alt=\"\" /></a>";
-								}
-								elseif($eventcat == 'Greek Life')								
-								{
-									echo  "<a href=\"#\" title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"../images/greek.jpg\" alt=\"\" /></a>";
-								}
-								// If there is no categories in the database, no image will be displayed. 
-								else
-								{
-									echo  "<a href=\"#\" title=\"Lorem ipsum\" class=\"thumbnail\"></a>";
-								}								
-
+							echo "<div class=\"col-xs-12 col-sm-12 col-md-3\">";
+								echo "<a href=\"#\" title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"http://lorempixel.com/250/140/people\" alt=\"Lorem ipsum\" /></a>";
 							echo "</div>";
 							echo "<div class=\"col-xs-12 col-sm-12 col-md-2\">";
 								echo "<ul class=\"meta-search\">";
@@ -214,6 +172,7 @@ Events Searched
 	</div>
  
 	</body>
+	
     <footer id="footer" class="midnight-blue">
         <div class="container">
             <div class="row">
@@ -236,6 +195,7 @@ Events Searched
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/main.js"></script>	
-	
+    <script src="js/main.js"></script>
+
+
 </html>
