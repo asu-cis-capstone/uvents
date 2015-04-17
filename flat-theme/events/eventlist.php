@@ -56,7 +56,9 @@ Events Searched
             </div>
         </div>
     </header>
-			
+	</br>
+	
+
 
 	<?php
 	//Only want to proceed entering the database if it is safe, that is, the page was submitted
@@ -73,10 +75,12 @@ Events Searched
 		$count = 0; // Store the number of times that an event is found with the user's input
 
 		//Declare html div body
-		echo"<div class = 'container'>";
-		echo"<h1>Search Results:</h1>";
-			
-			
+			echo "<div class=\"container\"><a href = $webpage.php'>";		
+				echo "<hgroup class=\"mb20\">";
+					echo "<h1>Search Results</h1>";
+					echo "<h2 class=\"lead\"><strong class=\"text-danger\">$count</strong> results were found for the search for <strong class=\"text-danger\">$criteria</strong></h2>";								
+				echo "</hgroup>";			
+			echo "</div>";		
 			//Create a loop to go through all of the records in the events table and post them on the webpage
 			while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
 			{
@@ -85,7 +89,7 @@ Events Searched
 				$webpage =  str_replace("/", "-", str_replace(" ", "-", ltrim(rtrim($eventname)))); //format,trim, and store the value in a variable
 				
 				$eventdate = $row['EventDate'];
-				$eventstart = $row['EventStartTime'];
+				$eventstart = $row['EventTime'];
 				$eventend = $row['EventEndTime'];
 				$eventloc = $row['EventLocation'];
 				$eventdes = $row['EventDescription'];
@@ -98,8 +102,39 @@ Events Searched
 				$eventweb = $row['EventWebsiteAddress'];
 				$eventcat = $row['EventCategory'];
 				
+				echo "<div class=\"container\"><a href = $webpage.php'>";
+
+					echo "<section class=\"col-xs-12 col-sm-6 col-md-12\">";
+						echo "<article class=\"search-result row\">";
+							echo "<div class=\"col-xs-12 col-sm-12 col-md-3\">";
+								echo "<a href=\"#\" title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"http://lorempixel.com/250/140/people\" alt=\"Lorem ipsum\" /></a>";
+							echo "</div>";
+							echo "<div class=\"col-xs-12 col-sm-12 col-md-2\">";
+								echo "<ul class=\"meta-search\">";
+									echo "<li><i class=\"glyphicon glyphicon-calendar\"></i> <span>$eventdate</span></li>";
+									echo "<li><i class=\"glyphicon glyphicon-time\"></i> <span>$eventstart</span></li>";
+									echo "<li><i class=\"glyphicon glyphicon-tags\"></i> <span>$eventcat</span></li>";
+								echo "</ul>";
+							echo "</div>";
+							echo "<div class=\"col-xs-12 col-sm-12 col-md-7 excerpet\">";
+								echo "<h3>$eventname</h3>";
+								echo "<p>$eventdes</p>";						
+								echo "<span class=\"plus\"><a href=\"#\" title=\"Lorem ipsum\"><i class=\"glyphicon glyphicon-plus\"></i></a></span>";
+							echo "</div>";
+							echo "<span class=\"clearfix borda\"></span>";
+						echo "</article>";
+
+					echo "</section>";
+					
+				echo "</div>";			
 				
-			echo"<div class = 'jumbotron text-left'><a href = '$webpage.php'>";
+			if($count == 0)
+			{
+				echo"<p><small>There were no events that matched your search input. Press the back button to return to the home page.</small></p>";
+				echo"<a href='../index.html' class='btn btn-danger'>Back</a>";
+			}
+
+		/* 	echo"<div class = 'jumbotron text-left'><a href = '$webpage.php'>";
 			echo"<form class='form-horizontal'>";
 			echo"<fieldset>";
 				echo"<div class='form-group'>";
@@ -122,19 +157,9 @@ Events Searched
 			echo"</form>";
 				
 			
-			echo "</div></a>";
+			echo "</div></a>"; */
 			} // end while statement			
 			//Display this message if there were no results retrieved from the user's input
-
-			if($count == 0)
-			{
-				echo"<p><small>There were no events that matched your search input. Press the back button to return to the home page.</small></p>";
-				echo"<a href='../index.html' class='btn btn-danger'>Back</a>";
-			}
-			
-			
-		echo "</div>";
-		
 			
 	} // end of if statement
 	?>
