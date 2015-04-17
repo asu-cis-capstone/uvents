@@ -22,25 +22,29 @@
 Wamp: http://www.wampserver.com/en/
 Mamp: http://www.mamp.info/en/
 
-2. Sync the "Uvents" files from the Github repository. Ensure the CIS440 folder is available as this has all the required web files.
+2. Download the "Uvents" files .zip from the Github repository. 
 
-3. Copy the CIS440 folder and go to My Computer > Local Disk (C:) > wamp > www > paste the CIS440 folder.
+3. create a new folder "uvents" in the directory My Computer > Local Disk (C:) > wamp > www > uvents.
 
-4. Point your browser towards local host and select "Phpmyadmin" under Tools.
+4. copy the contents from the .zip folder "flat-theme" into this new folder
 
-5. With the Phpmyadmin dashboard running, click "import" at the top navigation bar.
+5. Startup your wamp/mamp server and point your browser towards localhost and select "Phpmyadmin" under Tools.
 
-6. Under file to import, click choose file and browse for the uevents github repository folder.
+6. Create a new database called "uvents" collation utf8_general_ci
 
-7. Select the "uvents.sql" file, which is the pre-created database for this installation.
+7. With the Phpmyadmin dashboard running, select the new uvents database
 
-8. Click Go at the bottom to save changes and ensure the uevents database is now on the left sidebar. 
+8. click "import" at the top navigation bar.
 
-9. Type in "localhost" into your web browser and select the CIS440 folder under "Your Projects". 
+9. Select the "uvents.sql" file from the downloaded .zip file, which contains the framework the for the database
 
-10. Your browser should now be pointed towards the CIS440 folder displaying the home page of Uvents.
+10. Click "Go" at the bottom to save changes and ensure the uevents database is now on the left sidebar. 
 
-11. Use the search engine to search for an event name to ensure the database and wamp server are connected. 
+11. Point your web browser to "localhost" and select the uvents folder under "Your Projects". 
+
+12. Your browser should now be pointed towards the uvents folder displaying the home page of Uvents.
+
+13. Use the search engine to search for an event name to ensure the database and wamp server are connected. 
 
 Optional: To edit or view the code, download Notepad++ and right click any of the html/htm files and select "Edit with Notepad++".
 Additionally, code can also be viewed be by clicking Ctrl+U (Windows) or Command + U (Mac). Note this option only displays the HTML code.
