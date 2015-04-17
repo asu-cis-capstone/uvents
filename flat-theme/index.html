@@ -57,7 +57,7 @@ body {margin: 0px; }
 #content{ position:absolute;  top: 80px; padding-top: 27.2%;  width: 100%; color: #FFF; text-align: center;}
 #content p{font-size: 130%;}
 #bg{width: 100%; }
-#top_layer{ position:absolute;  top: 80px; width: 100%; padding-bottom: 56.2%; color: #FFF; background-color: rgba(0, 0, 0, .5); text-align: center; font-size 1%;}
+#top_layer{ position:absolute;  top: 80px; width: 100%; padding-bottom: 56.2%; color: #FFF; background-color: rgba(0,0,0,0.8); text-align: center; font-size 1%;}
 </style>
 
 
@@ -73,7 +73,14 @@ body {margin: 0px; }
 </div>	
 
 <div id ="content">
-<p>Discover Events Around Your University<p>
+	<p>Discover Events Around Your University<p>
+		<form method="post" action="events/eventlist.php" class="navbar-form navbar-center" role="search">
+			<div class="form-group">
+				<input type="hidden" name="submitted" value="true">
+				<input type="text" class="form-control" placeholder="Search" name="criteria">
+			</div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
 </div>	
    
     <section id="recent-works">
