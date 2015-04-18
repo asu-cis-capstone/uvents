@@ -539,8 +539,8 @@ body > section {
   width: 100%;
 }
 .portfolio-item2 img {
-  width: 166.666666px;
-  height: 45px;
+  width:  333px;
+  height: 90px;
 }
 .portfolio-item h5 {
   background: #fff;
@@ -1174,4 +1174,6 @@ ul.faq li > div h3 {
   margin-top: 150px;
   margin-bottom: 150px;
 }
+
+
 
