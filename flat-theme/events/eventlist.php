@@ -75,7 +75,7 @@ Events Searched
 		$count = 0; // Store the number of times that an event is found with the user's input
 
 		//Declare html div body
-			echo "<div class=\"container\"><a href = $webpage.php'>";		
+			echo "<div class=\"container\">";		
 				echo "<hgroup class=\"mb20\">";
 					if ($criteria != '')
 					{
@@ -111,53 +111,54 @@ Events Searched
 				$eventphone = $row['EventPhoneNumber'];
 				$eventweb = $row['EventWebsiteAddress'];
 				$eventcat = $row['EventCategory'];
+				
 				//holds the color of the text-font
 				$textcolor = 'text-default';
 				$glyphicon = 'glyphicon glyphicon-tags';
 				
-				echo "<div class=\"container\"><a href = $webpage.php'>";
+				echo "<div class=\"container\">";
 
 					echo "<section class=\"col-xs-12 col-sm-6 col-md-12\">";
 						echo "<article class=\"search-result row\">";
 							echo "<div class=\"col-xs-12 col-sm-12 col-md-3\">";			
 								if($eventcat == 'Business')								
 								{
-									echo  "<a href=\"#\" title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"../images/business.png\" alt=\"\" /></a>";
+									echo  "<a href='$webpage.php' title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"../images/business.png\" alt=\"\" /></a>";
 								}
 								elseif($eventcat == 'Engineering')								
 								{
-									echo  "<a href=\"#\" title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"../images/engineering.png\" alt=\"\" /></a>";
+									echo  "<a href='$webpage.php' title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"../images/engineering.png\" alt=\"\" /></a>";
 									$textcolor = 'text-primary';
 								}
 								elseif($eventcat == 'Design')								
 								{
-									echo  "<a href=\"#\" title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"../images/design.jpg\" alt=\"\" /></a>";
+									echo  "<a href='$webpage.php' title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"../images/design.jpg\" alt=\"\" /></a>";
 									$textcolor = 'text-danger';
 								}
 								elseif($eventcat == 'Career')								
 								{
-									echo  "<a href=\"#\" title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"../images/career.jpg\" alt=\"\" /></a>";
+									echo  "<a href='$webpage.php' title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"../images/career.jpg\" alt=\"\" /></a>";
 									$textcolor = 'text-success';
 								}
 								elseif($eventcat == 'Food')								
 								{
-									echo  "<a href=\"#\" title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"../images/food.jpg\" alt=\"\" /></a>";
+									echo  "<a href='$webpage.php' title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"../images/food.jpg\" alt=\"\" /></a>";
 									$textcolor = 'text-info';
 								}
 								elseif($eventcat == 'Bars and Restaurants')								
 								{
-									echo  "<a href=\"#\" title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"../images/bars.jpg\" alt=\"\" /></a>";
+									echo  "<a href='$webpage.php' title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"../images/bars.jpg\" alt=\"\" /></a>";
 									$textcolor = 'text-warning';
 								}
 								elseif($eventcat == 'Greek Life')								
 								{
-									echo  "<a href=\"#\" title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"../images/greek.jpg\" alt=\"\" /></a>";
+									echo  "<a href='$webpage.php' title=\"Lorem ipsum\" class=\"thumbnail\"><img src=\"../images/greek.jpg\" alt=\"\" /></a>";
 									$textcolor = 'text-info';
 								}
 								// If there is no categories in the database, no image will be displayed. 
 								else
 								{
-									echo  "<a href=\"#\" title=\"Lorem ipsum\" class=\"thumbnail\"></a>";
+									echo  "<a href='$webpage.php' title=\"Lorem ipsum\" class=\"thumbnail\"></a>";
 								}								
 
 							echo "</div>";
@@ -172,7 +173,7 @@ Events Searched
 							echo "<div class=\"col-xs-12 col-sm-12 col-md-7 excerpet\">";
 								echo "<h3>$eventname</h3>";
 								echo "<p>$eventdes</p>";						
-								echo "<span class=\"plus\"><a href=\"#\" title=\"Lorem ipsum\"><i class=\"glyphicon glyphicon-plus\"></i></a></span>";
+								echo "<span class=\"plus\"><a href='$webpage.php' title=\"Lorem ipsum\"><i class=\"glyphicon glyphicon-plus\"></i></a></span>";
 							echo "</div>";
 							echo "<span class=\"clearfix borda\"></span>";
 						echo "</article>";
