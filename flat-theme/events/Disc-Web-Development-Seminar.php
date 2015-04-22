@@ -88,25 +88,26 @@ Events Searched
 		$eventweb = $row['EventWebsiteAddress'];
 		$eventcat = $row['EventCategory'];
 	
-		echo "<div class = 'container'>";	
-			echo"<h1>$eventname</h1>";
-		echo "</div>";
-		
-		echo "<div class = 'container'>";
-			echo"<div class = 'jumbotron text-left'>";
-				echo"<img src='../$eventimg' alt='$eventimg' height='45%' width='45%'/>";
-				echo"<h5><strong>Date: </strong>$eventdate</h5>";
-				echo"<h5><strong>Time: </strong>$eventstart-$eventend</h5>";
-				echo"<h5><strong>Location: </strong>$eventloc</h5>";
-				echo"<h5><strong>Sponsored by: </strong>$eventsponsor</h5>";
-				echo"<h5><strong>Affiliated with: </strong>$eventschool</h5>";
-				echo"<p><strong>Description: </strong></p>";
-				echo"<p>$eventdes</p>";
-				echo"<h5><strong>Email: </strong>$eventemail</h5>";
-				echo"<h5><strong>Phone Number: </strong>$eventphone</h5>";
-				echo"<h5><strong>Website: </strong>$eventweb</h5>";	
-			echo"</div>";
-		echo"</div>";
+		echo 
+		"<div class = 'container'>	
+			<h1>$eventname</h1>
+		</div>
+			
+			<div class = 'container'>
+				<div class = 'jumbotron text-left'>
+					<img src='../$eventimg' alt='ticketmaster' height='45%' width='45%'/>
+					<h5><strong>Date: </strong>$eventdate</h5>
+					<h5><strong>Time: </strong>$eventstart-$eventend</h5>
+					<h5><strong>Location: </strong>$eventloc</h5>
+					<h5><strong>Sponsored by: </strong>$eventsponsor</h5>
+					<h5><strong>Affiliated with: </strong>$eventschool</h5>
+					<p><strong>Description: </strong></p>
+					<p>$eventdes</p>
+					<h5><strong>Email: </strong>$eventemail</h5>
+					<h5><strong>Phone Number: </strong>$eventphone</h5>
+					<h5><strong>Website: </strong>$eventweb</h5>	
+				</div>
+			</div>";
 	} // end while statement
 
 	?>
