@@ -84,7 +84,7 @@
 			if($count == 0)
 			{
 				echo"<p><small>There were no events that matched your search input. Press the back button to return to the home page.</small></p>";
-				echo"<a href='../index.html' class='btn btn-danger'>Back</a>";
+				echo"<a href='../categories.html' class='btn btn-danger'>Back</a>";
 			}
 			
 			echo "</div>";
