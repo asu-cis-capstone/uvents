@@ -2313,7 +2313,7 @@ fieldset[disabled] .btn-primary.active {
 
 
 /*Button 1 */
- .btn-button1{color:#fff;background-color:#096068;border-color:13ddbc; 
+ .btn-button1{color:#fff;
  background: 
     /* top, transparent red, faked with gradient */ 
     linear-gradient(
@@ -2322,8 +2322,9 @@ fieldset[disabled] .btn-primary.active {
     ),
     /* bottom, image */
     url("../images/business.jpg");
-  background-size: cover;}
- .btn-button1:hover,.btn-button1:focus,.btn-button1:active,.btn-button1.active,.open .dropdown-toggle.btn-button1{color:#fff;background-color:#85ebf4;border-color:13ddbc}
+  background-size: cover;
+  border:1px solid grey;margin:5px; box-shadow:5px 8px 8px 0 grey;}
+ .btn-button1:hover,.btn-button1:focus,.btn-button1:active,.btn-button1.active,.open .dropdown-toggle.btn-button1{color:#fff;border-color:#fff; opacity: 0.5}
  .btn-button1:active,.btn-button1.active,.open .dropdown-toggle.btn-button1{background-image:none}
  .btn-button1.disabled,.btn-button1[disabled],fieldset[disabled] 
  .btn-button1,.btn-button1.disabled:hover,.btn-button1[disabled]:hover,fieldset[disabled] 
@@ -2335,7 +2336,7 @@ fieldset[disabled] .btn-primary.active {
 
  
  /*Button 2 */
- .btn-button2{color:#fff;background-color:#0d8b97;border-color:13ddbc; 
+ .btn-button2{color:#fff;
  background: 
     /* top, transparent red, faked with gradient */ 
     linear-gradient(
@@ -2344,8 +2345,9 @@ fieldset[disabled] .btn-primary.active {
     ),
     /* bottom, image */
 	url("../images/engineering.png"); 
- background-size: cover}
- .btn-button2:hover,.btn-button2:focus,.btn-button2:active,.btn-button2.active,.open .dropdown-toggle.btn-button2{color:#fff;background-color:#85ebf4;border-color:13ddbc}
+ background-size: cover;
+   border:1px solid grey;margin:5px; box-shadow:5px 8px 8px 0 grey;}
+ .btn-button2:hover,.btn-button2:focus,.btn-button2:active,.btn-button2.active,.open .dropdown-toggle.btn-button2{color:#fff;border-color:#fff; opacity: 0.5}
  .btn-button2:active,.btn-button2.active,.open .dropdown-toggle.btn-button2{background-image:none}
  .btn-button2.disabled,.btn-button2[disabled],fieldset[disabled] 
  .btn-button2,.btn-button2.disabled:hover,.btn-button2[disabled]:hover,fieldset[disabled] 
@@ -2356,7 +2358,7 @@ fieldset[disabled] .btn-primary.active {
 
  
  /*Button 3 */
- .btn-button3{color:#fff;background-color:#0fa1ae;border-color:#e5e5e5; 
+ .btn-button3{color:#fff; 
  background: 
     /* top, transparent red, faked with gradient */ 
     linear-gradient(
@@ -2365,8 +2367,9 @@ fieldset[disabled] .btn-primary.active {
     ),
     /* bottom, image */
  url("../images/design.jpg"); 
- background-size: cover;}
- .btn-button3:hover,.btn-button3:focus,.btn-button3:active,.btn-button3.active,.open .dropdown-toggle.btn-button3{color:#fff;background-color:#85ebf4;border-color:13ddbc}
+ background-size: cover;
+ border:1px solid grey;margin:5px; box-shadow:5px 8px 8px 0 grey;}
+ .btn-button3:hover,.btn-button3:focus,.btn-button3:active,.btn-button3.active,.open .dropdown-toggle.btn-button3{color:#fff;border-color:#fff; opacity: 0.5}
  .btn-button3:active,.btn-button3.active,.open .dropdown-toggle.btn-button3{background-image:none}
  .btn-button3.disabled,.btn-button3[disabled],fieldset[disabled] 
  .btn-button3,.btn-button3.disabled:hover,.btn-button3[disabled]:hover,fieldset[disabled] 
@@ -2377,7 +2380,8 @@ fieldset[disabled] .btn-primary.active {
 
  
  /*Button 4 */
- .btn-button4{color:#fff;background-color:#13ddbc;border-color:#e5e5e5; background: 
+ .btn-button4{color:#fff; 
+ background:
     /* top, transparent red, faked with gradient */ 
     linear-gradient(
       rgba(0, 0, 0, 0.45), 
@@ -2385,8 +2389,9 @@ fieldset[disabled] .btn-primary.active {
     ),
     /* bottom, image */
 	url("../images/career.jpg"); 
-	background-size: cover;}
- .btn-button4:hover,.btn-button4:focus,.btn-button4:active,.btn-button4.active,.open .dropdown-toggle.btn-button4{color:#fff;background-color:#85ebf4;border-color:13ddbc}
+	background-size: cover;
+	border:1px solid grey;margin:5px; box-shadow:5px 8px 8px 0 grey;}
+ .btn-button4:hover,.btn-button4:focus,.btn-button4:active,.btn-button4.active,.open .dropdown-toggle.btn-button4{color:#fff;border-color:#fff; opacity: 0.5}
  .btn-button4:active,.btn-button4.active,.open .dropdown-toggle.btn-button4{background-image:none}
  .btn-button4.disabled,.btn-button4[disabled],fieldset[disabled] 
  .btn-button4,.btn-button4.disabled:hover,.btn-button4[disabled]:hover,fieldset[disabled] 
@@ -2397,7 +2402,7 @@ fieldset[disabled] .btn-primary.active {
 
  
  /*Button 5 */
- .btn-button5{color:#fff;background-color:#13ddcc;border-color:13ddbc; 
+ .btn-button5{color:#fff; 
  background: 
     /* top, transparent red, faked with gradient */ 
     linear-gradient(
@@ -2406,8 +2411,9 @@ fieldset[disabled] .btn-primary.active {
     ),
     /* bottom, image */
 	url("../images/food.jpg"); 
- background-size: cover;}
- .btn-button5:hover,.btn-button5:focus,.btn-button5:active,.btn-button5.active,.open .dropdown-toggle.btn-button5{color:#fff;background-color:#85ebf4;border-color:13ddbc}
+ background-size: cover;
+ border:1px solid grey;margin:5px; box-shadow:5px 8px 8px 0 grey;}
+ .btn-button5:hover,.btn-button5:focus,.btn-button5:active,.btn-button5.active,.open .dropdown-toggle.btn-button5{color:#fff;border-color:#fff; opacity: 0.5}
  .btn-button5:active,.btn-button5.active,.open .dropdown-toggle.btn-button5{background-image:none}
  .btn-button5.disabled,.btn-button5[disabled],fieldset[disabled] 
  .btn-button5,.btn-button5.disabled:hover,.btn-button5[disabled]:hover,fieldset[disabled] 
@@ -2418,7 +2424,7 @@ fieldset[disabled] .btn-primary.active {
 
  
  /*Button 6 */
- .btn-button6{color:#fff;background-color:#13dddd;border-color:13ddbc; 
+ .btn-button6{color:#fff; 
  background: 
     /* top, transparent red, faked with gradient */ 
     linear-gradient(
@@ -2427,8 +2433,9 @@ fieldset[disabled] .btn-primary.active {
     ),
     /* bottom, image */
 	url("../images/bars.jpg"); 
- background-size: cover;}
- .btn-button6:hover,.btn-button6:focus,.btn-button6:active,.btn-button6.active,.open .dropdown-toggle.btn-button6{color:#fff;background-color:#85ebf4;border-color:13ddbc}
+ background-size: cover;
+ border:1px solid grey;margin:5px; box-shadow:5px 8px 8px 0 grey;}
+ .btn-button6:hover,.btn-button6:focus,.btn-button6:active,.btn-button6.active,.open .dropdown-toggle.btn-button6{color:#fff;border-color:#fff; opacity: 0.5}
  .btn-button6:active,.btn-button6.active,.open .dropdown-toggle.btn-button6{background-image:none}
  .btn-button6.disabled,.btn-button6[disabled],fieldset[disabled] 
  .btn-button6,.btn-button6.disabled:hover,.btn-button6[disabled]:hover,fieldset[disabled] 
@@ -2439,7 +2446,7 @@ fieldset[disabled] .btn-primary.active {
 
  
  /*Button 7 */
- .btn-button7{color:#fff;background-color:#13ccdd;border-color:13ddbc; 
+ .btn-button7{color:#fff; 
  background: 
     /* top, transparent red, faked with gradient */ 
     linear-gradient(
@@ -2448,8 +2455,9 @@ fieldset[disabled] .btn-primary.active {
     ),
     /* bottom, image */
 	url("../images/greek.jpg"); 
- background-size: cover;}
- .btn-button7:hover,.btn-button7:focus,.btn-button7:active,.btn-button7.active,.open .dropdown-toggle.btn-button7{color:#fff;background-color:#85ebf4;border-color:13ddbc}
+ background-size: cover;
+ border:1px solid grey;margin:5px; box-shadow:5px 8px 8px 0 grey;}
+ .btn-button7:hover,.btn-button7:focus,.btn-button7:active,.btn-button7.active,.open .dropdown-toggle.btn-button7{color:#fff;border-color:#fff; opacity: 0.5}
  .btn-button7:active,.btn-button7.active,.open .dropdown-toggle.btn-button7{background-image:none}
  .btn-button7.disabled,.btn-button7[disabled],fieldset[disabled] 
  .btn-button7,.btn-button7.disabled:hover,.btn-button7[disabled]:hover,fieldset[disabled] 
