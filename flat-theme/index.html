@@ -75,13 +75,17 @@ body {margin: 0px; }
 <div id ="content">
 	<p>Discover Events Around Your University</p>
 		<form method="post" action="events/eventlist.php" class="navbar-form navbar-center" role="search">
-			<div class="form-group">
+			<div class="input-group">
 				<input type="hidden" name="submitted" value="true">
 				<input type="text" class="form-control" placeholder="Search" name="criteria">
+                    <span class="input-group-btn">
+                        <button type = "submit" class="btn btn-default" type="button"><span class = "glyphicon glyphicon-search"></span></button>
+                    </span>				
 			</div>
-			<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search">
-			</span></button>
+
 		</form>
+
+		
 </div>	
    
     <section id="recent-works">
