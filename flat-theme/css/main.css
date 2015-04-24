@@ -196,6 +196,14 @@
 background-color: rgb(52, 73, 94);
 }
 
+.card.hovercard-invisible {
+    position: relative;
+    padding-top: 0;
+    overflow: hidden;
+    text-align: center;
+background-color: inherit;
+}
+
 .card.hovercard .cardheader {
     background: url("");
     background-size: cover;

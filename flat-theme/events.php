@@ -106,6 +106,9 @@
 		$unique[] = $eventid;
 		$img[] = $eventimg;
 		$time[] = $eventstart;
+		$starttime = date("g:i A",strtotime($eventstart));
+		$endtime = date("g:i A",strtotime($eventend));
+		$date = date("l, F jS, Y",strtotime($eventdate));
 		//Call to the database and create modals
 		echo"<div class ='modal fade' id='modal-$eventid'>
 			<div class='modal-dialog modal-lg'>
@@ -114,29 +117,23 @@
 						<button type ='button' class ='close' data-dismiss='modal'>&times;</button>
 						<h1 class='modal-title'>$eventname</h1>
 						<h1> $array[$count] </h1>
-						
 					</div>
 						
 						<div class ='modal-body'>
 						<img src='$eventimg' alt='ticketmaster' height='45%' width='45%'/>
-					<h5><strong>Date: </strong>$eventdate</h5>
-					<h5><strong>Time: </strong>$eventstart - $eventend</h5>
+					<h5><strong>Date: </strong>$date</h5>
+					<h5><strong>Time: </strong>$starttime - $endtime</h5>
 					<h5><strong>Location: </strong>$eventloc</h5>
 					<h5><strong>Sponsored by: </strong>$eventsponsor</h5>
 					<h5><strong>Affiliated with: </strong>$eventschool</h5>
-					<p><strong>Description: </strong></p><p>$eventdes</p>
-					
-						
+					<p><strong>Description: </strong></p><p>$eventdes</p>						
 						</div>
 						
 						<div class='modal-footer'>
-						
 						<h5><strong>Email: </strong>$eventemail</h5>
 					<h5><strong>Phone Number: </strong>$eventphone</h5>
 					<h5><strong>Website: </strong>$eventweb</h5>	
-						
 						</div>
-						
 				</div>
 			</div>
 		</div>";
@@ -144,13 +141,14 @@
 	} // end while statement
 
 
+$found =  false; // boolean to allow or disallow an invisible spacing between each row, if no events fall between that time range
 
 echo"<link href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet'>
 		<div class='container'>
 			<div class='row'>";
 			
-			//first row
-			echo"<h1>9:00 events</h1>";
+			//--------------------------------------first row--------------------------------------------------
+			echo"<h1>9:00 AM events</h1>";
 			for($i = 0; $i < count($time); $i++)
 			{
 				//create variables to hold the formatted, low range, and high range of time
@@ -160,39 +158,41 @@ echo"<link href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.m
 				
 				if($fmttime >= $lowrange and $fmttime < $highrange)
 				{
-
+				$newtime = date("g:i",$fmttime);
 				echo"<div class='col-lg-2 col-sm-1'>
-					
 					<div class='card hovercard'>
 						<div class='cardheader'>
 						<a href='#'><img src='$img[$i]' alt='' /></a>
 						<div class='portfolio-item'>
-											<img class='img-responsive' src='$img[$i]'  alt=''/>
-													<div class='overlay'>
-													<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
-													</div>
-											</div>   
+							<img class='img-responsive' src='$img[$i]'  alt=''/>
+								<div class='overlay'>
+								<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
+								</div>
+							</div>   
 						</div>
-
 						<div class='info'>
 						</br>
-							<div class='desc'>$time[$i]</div>
-						
+							<div class='desc'>$newtime</div>
 						</div>
-
 					</div>
-
 				</div>";
-				
+				$found = true;
 				} //end of if loop
-				
-				
-			} // end of for loop				
+			} // end of for loop
+			if($found == false)			
+			{
+				//Place an invisible hovercard in the row if there are no results retrieved back from the database
+				echo"<div class='col-lg-2 col-sm-1'>
+							<div class='card hovercard-invisible'></div>
+						</div>";
+			}
 			echo"</div>";// end of first row
 			
-			//second row
+			
+			//--------------------------------------second row---------------------------------------------
 			echo"<div class='row'>"; 
-			echo"<h1>12:00 events</h1>";
+			echo"<h1>12:00 PM events</h1>";
+			$found = false;// reset the found variable to false
 			for($i = 0; $i < count($time); $i++)
 			{
 				//create variables to hold the formatted, low range, and high range of time
@@ -202,39 +202,41 @@ echo"<link href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.m
 				
 				if($fmttime >= $lowrange and $fmttime < $highrange)
 				{
-
+				$newtime = date("g:i A",$fmttime);
 				echo"<div class='col-lg-2 col-sm-1'>
-					
 					<div class='card hovercard'>
 						<div class='cardheader'>
 						<a href='#'><img src='$img[$i]' alt='' /></a>
 						<div class='portfolio-item'>
-											<img class='img-responsive' src='$img[$i]'  alt=''/>
-													<div class='overlay'>
-													<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
-													</div>
-											</div>   
+							<img class='img-responsive' src='$img[$i]'  alt=''/>
+								<div class='overlay'>
+								<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
+								</div>
+							</div>   
 						</div>
-
 						<div class='info'>
 						</br>
-							<div class='desc'>$time[$i]</div>
-						
+							<div class='desc'>$newtime</div>
 						</div>
-
 					</div>
-
 				</div>";
-				
+				$found ==true;
 				} //end of if loop
-				
-				
-			} // end of for loop				
-			echo"</div>";// end of second row		
+			} // end of for loop
+			if($found == false)			
+			{
+				//Place an invisible hovercard in the row if there are no results retrieved back from the database
+				echo"<div class='col-lg-2 col-sm-1'>
+							<div class='card hovercard-invisible'></div>
+						</div>";
+			}			
+			echo"</div>";// end of second row
 			
-			//third row
+			
+			//----------------------------------------third row---------------------------------------------
 			echo"<div class='row'>"; 
-			echo"<h1>3:00 events</h1>";
+			echo"<h1>3:00 PM events</h1>";
+			$found = false;// reset the found variable to false
 			for($i = 0; $i < count($time); $i++)
 			{
 				//create variables to hold the formatted, low range, and high range of time
@@ -244,39 +246,41 @@ echo"<link href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.m
 				
 				if($fmttime >= $lowrange and $fmttime < $highrange)
 				{
-
+				$newtime = date("g:i",$fmttime);
 				echo"<div class='col-lg-2 col-sm-1'>
-					
 					<div class='card hovercard'>
 						<div class='cardheader'>
 						<a href='#'><img src='$img[$i]' alt='' /></a>
 						<div class='portfolio-item'>
-											<img class='img-responsive' src='$img[$i]'  alt=''/>
-													<div class='overlay'>
-													<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
-													</div>
-											</div>   
+							<img class='img-responsive' src='$img[$i]'  alt=''/>
+								<div class='overlay'>
+								<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
+								</div>
+							</div>   
 						</div>
-
 						<div class='info'>
 						</br>
-							<div class='desc'>$time[$i]</div>
-						
+							<div class='desc'>$newtime</div>
 						</div>
-
 					</div>
-
 				</div>";
-				
+				$found = true;
 				} //end of if loop
-				
-				
-			} // end of for loop			
-			echo"</div>"; // end of third row			
+			} // end of for loop
+			if($found == false)			
+			{
+				//Place an invisible hovercard in the row if there are no results retrieved back from the database
+				echo"<div class='col-lg-2 col-sm-1'>
+							<div class='card hovercard-invisible'></div>
+						</div>";
+			}					
+			echo"</div>"; // end of third row
 			
-			//fourth row
+			
+			//--------------------------------------fourth row---------------------------------------------
 			echo"<div class='row'>"; 
-			echo"<h1>6:00 events</h1>";
+			echo"<h1>6:00 PM events</h1>";
+			$found = false;// reset the found variable to false
 			for($i = 0; $i < count($time); $i++)
 			{
 				//create variables to hold the formatted, low range, and high range of time
@@ -286,34 +290,34 @@ echo"<link href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.m
 				
 				if($fmttime >= $lowrange and $fmttime <= $highrange)
 				{
-
+				$newtime = date("g:i",$fmttime);
 				echo"<div class='col-lg-2 col-sm-1'>
-					
 					<div class='card hovercard'>
 						<div class='cardheader'>
 						<a href='#'><img src='$img[$i]' alt='' /></a>
 						<div class='portfolio-item'>
-											<img class='img-responsive' src='$img[$i]'  alt=''/>
-													<div class='overlay'>
-													<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
-													</div>
-											</div>   
+							<img class='img-responsive' src='$img[$i]'  alt=''/>
+								<div class='overlay'>
+								<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
+								</div>
+							</div>   
 						</div>
-
 						<div class='info'>
 						</br>
-							<div class='desc'>$time[$i]</div>
-						
+							<div class='desc'>$newtime</div>
 						</div>
-
 					</div>
-
 				</div>";
-				
-				} //end of if loop
-				
-				
-			} // end of for loop			
+				$found = true;
+				} //end of if loop								
+			} // end of for loop
+			if($found == false)			
+			{
+				//Place an invisible hovercard in the row if there are no results retrieved back from the database
+				echo"<div class='col-lg-2 col-sm-1'>
+							<div class='card hovercard-invisible'></div>
+						</div>";
+			}					
 			echo"</div>"; // end of fourth row	
 echo"</div>"; // end of container
 
