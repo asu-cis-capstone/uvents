@@ -64,7 +64,7 @@
     </header><!--/header-->
 	
       
-	  	<?php
+	<?php
 	//Set time zone to arizona mountain standard time
 	date_default_timezone_set('America/Phoenix');
 	

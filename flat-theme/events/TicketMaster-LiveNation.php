@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <!-- 
-Events Searched
+TicketMaster
 -->
 
 <html lang="en">
@@ -62,7 +62,10 @@ Events Searched
     </header>
 	
 
-	<?php	
+	<?php
+	//Set time zone to arizona mountain standard time
+	date_default_timezone_set('America/Phoenix');
+	
 	//Only want to proceed entering the database if it is safe, that is, the page was submitted
 
 	/* if (isset($_POST['submitted'])) { */
@@ -71,7 +74,7 @@ Events Searched
 	include('../local-connect.php');
 
 	//Define variables
-	$query = "SELECT * FROM  events WHERE EventstartTime BETWEEN '9:00' AND '21:00' "; // Select all events where the event starts between 9:00 AM and 9:00 PM
+	$query = "SELECT * FROM  events WHERE EventName = 'TicketMaster/LiveNation' "; // Select all events where the event starts between 9:00 AM and 9:00 PM
 	$result =  mysqli_query($dbc, $query) or die('error obtaining data'); // Store the results in a variable unless there was in error in the process
 	
 	
@@ -79,7 +82,6 @@ Events Searched
 	{
 		
 		//Store event columns in variables
-		$eventid = $row['EventId'];
 		$eventname = $row['EventName'];
 		$eventdate = $row['EventDate'];
 		$eventstart = $row['EventStartTime']; // will need to create an array to split into rows
@@ -95,9 +97,10 @@ Events Searched
 		$eventweb = $row['EventWebsiteAddress'];
 		$eventcat = $row['EventCategory'];
 		
-		$unique[] = $eventid;
-		$img[] = $eventimg;
-		$time[] = $eventstart;
+		//Format time and date
+		$starttime = date("g:i A",strtotime($eventstart));
+		$endtime = date("g:i A",strtotime($eventend));
+		$date = date("l, F jS, Y",strtotime($eventdate));
 		
 		echo 
 		"<div class = 'container'>	
@@ -106,9 +109,9 @@ Events Searched
 			
 			<div class = 'container'>
 				<div class = 'jumbotron text-left'>
-					<img src='../$eventimg' alt='ticketmaster' height='45%' width='45%'/>
-					<h5><strong>Date: </strong>$eventdate</h5>
-					<h5><strong>Time: </strong>$eventstart - $eventend</h5>
+					<img src='../$eventimg' alt='$eventname' height='45%' width='45%'/>
+					<h5><strong>Date: </strong>$date</h5>
+					<h5><strong>Time: </strong>$starttime - $endtime</h5>
 					<h5><strong>Location: </strong>$eventloc</h5>
 					<h5><strong>Sponsored by: </strong>$eventsponsor</h5>
 					<h5><strong>Affiliated with: </strong>$eventschool</h5>

@@ -112,6 +112,11 @@ Events Searched
 				$eventweb = $row['EventWebsiteAddress'];
 				$eventcat = $row['EventCategory'];
 				
+				//Format time and date
+				$starttime = date("g:i A",strtotime($eventstart));
+				$endtime = date("g:i A",strtotime($eventend));
+				$date = date("F jS, Y",strtotime($eventdate));
+				
 				//holds the color of the text-font
 				$textcolor = 'text-default';
 				$glyphicon = 'glyphicon glyphicon-tags';
@@ -164,8 +169,8 @@ Events Searched
 							echo "</div>";
 							echo "<div class=\"col-xs-12 col-sm-12 col-md-2\">";
 								echo "<ul class=\"meta-search\">";
-									echo "<li><i class=\"glyphicon glyphicon-calendar\"></i> <span>$eventdate</span></li>";
-									echo "<li><i class=\"glyphicon glyphicon-time\"></i> <span>$eventstart - $eventend</span></li>";
+									echo "<li><i class=\"glyphicon glyphicon-calendar\"></i> <span>$date</span></li>";
+									echo "<li><i class=\"glyphicon glyphicon-time\"></i> <span>$starttime - $endtime</span></li>";
 									echo "<li><i class=\"$glyphicon\"></i> <span class = '$textcolor'>$eventcat</span></li>";
 									
 								echo "</ul>";

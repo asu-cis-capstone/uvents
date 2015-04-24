@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <!-- 
-Events Searched
+Disc Web Development Seminar
 -->
 
 <html lang="en">
@@ -59,6 +59,9 @@ Events Searched
     </header>
 	
 	<?php
+	//Set time zone to arizona mountain standard time
+	date_default_timezone_set('America/Phoenix');
+	
 	//Only want to proceed entering the database if it is safe, that is, the page was submitted
 
 	/* if (isset($_POST['submitted'])) { */
@@ -67,15 +70,17 @@ Events Searched
 	include('../local-connect.php');
 
 	//Define variables
-	$query = "SELECT * FROM	events WHERE EventId = 13 "; // Select statement to call data from events category based on the search criteria
+	$query = "SELECT * FROM  events WHERE EventName = 'Disc Web Development Seminar' "; // Select all events where the event starts between 9:00 AM and 9:00 PM
 	$result =  mysqli_query($dbc, $query) or die('error obtaining data'); // Store the results in a variable unless there was in error in the process
+	
 	
 	while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
 	{
+		
 		//Store event columns in variables
 		$eventname = $row['EventName'];
 		$eventdate = $row['EventDate'];
-		$eventstart = $row['EventStartTime'];
+		$eventstart = $row['EventStartTime']; // will need to create an array to split into rows
 		$eventend = $row['EventEndTime'];
 		$eventloc = $row['EventLocation'];
 		$eventdes = $row['EventDescription'];
@@ -87,7 +92,12 @@ Events Searched
 		$eventphone = $row['EventPhoneNumber'];
 		$eventweb = $row['EventWebsiteAddress'];
 		$eventcat = $row['EventCategory'];
-	
+		
+		//Format time and date
+		$starttime = date("g:i A",strtotime($eventstart));
+		$endtime = date("g:i A",strtotime($eventend));
+		$date = date("l, F jS, Y",strtotime($eventdate));
+		
 		echo 
 		"<div class = 'container'>	
 			<h1>$eventname</h1>
@@ -95,9 +105,9 @@ Events Searched
 			
 			<div class = 'container'>
 				<div class = 'jumbotron text-left'>
-					<img src='../$eventimg' alt='ticketmaster' height='45%' width='45%'/>
-					<h5><strong>Date: </strong>$eventdate</h5>
-					<h5><strong>Time: </strong>$eventstart-$eventend</h5>
+					<img src='../$eventimg' alt='$eventname' height='45%' width='45%'/>
+					<h5><strong>Date: </strong>$date</h5>
+					<h5><strong>Time: </strong>$starttime - $endtime</h5>
 					<h5><strong>Location: </strong>$eventloc</h5>
 					<h5><strong>Sponsored by: </strong>$eventsponsor</h5>
 					<h5><strong>Affiliated with: </strong>$eventschool</h5>
@@ -108,6 +118,7 @@ Events Searched
 					<h5><strong>Website: </strong>$eventweb</h5>	
 				</div>
 			</div>";
+			
 	} // end while statement
 
 	?>
