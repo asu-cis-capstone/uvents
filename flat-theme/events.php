@@ -63,270 +63,366 @@
 
     </header><!--/header-->
 	
-       <div id="container">
-            <div id="header">               
-               <div class="logo"> <img src="img/branding/netflix_logo.gif"/> </div>               
-            </div>
-            <div id="main" role="main">
-                <!-- Movie browser -->
-                <div id="browser">
-                    
-                    <!-- Category -->
-                    <div class="categoryTitle"><h1>9:00 events</h1></div>
-                    <div class="category">
-                        <ul class="categoryRow clearfix">
-                            <li class="movie">
-								<div class="portfolio-item">
-									<img class="img-responsive" src="images/poster1.jpg" width="150" height="214"  alt="">
-										<div class="overlay">
-											<a class="preview btn btn-danger" title="" href="images/poster1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
-                                        </div>
-                                 </div>                                   
-                            </li>
-                            <li class="movie">
-								<div class="portfolio-item">
-									<img class="img-responsive" src="images/poster2.jpg" width="150" height="214"  alt="">
-										<div class="overlay">
-											<a class="preview btn btn-danger" href="images/poster2.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
-                                        </div>
-                                 </div>                                   
-                            </li>
-                            <li class="movie">
-								<div class="portfolio-item">
-									<img class="img-responsive" src="images/poster4.jpg" width="150" height="214"  alt="">
-										<div class="overlay">
-											<a class="preview btn btn-danger" href="images/poster4.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
-                                        </div>
-                                 </div>                                   
-                            </li>
-                            <li class="movie">
-								<div class="portfolio-item">
-									<img class="img-responsive" src="images/poster5.jpg" width="150" height="214"  alt="">
-										<div class="overlay">
-											<a class="preview btn btn-danger" href="images/poster5.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
-                                        </div>
-                                 </div>                                   
-                            </li>
-                            <li class="movie">
-								<div class="portfolio-item">
-									<img class="img-responsive" src="images/poster2.jpg" width="150" height="214"  alt="">
-										<div class="overlay">
-											<a class="preview btn btn-danger" href="images/poster2.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
-                                        </div>
-                                 </div>                                   
-                            </li>
-                            <li class="movie">
-								<div class="portfolio-item">
-									<img class="img-responsive" src="images/poster7.jpg" width="150" height="214"  alt="">
-										<div class="overlay">
-											<a class="preview btn btn-danger" href="images/poster7.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
-                                        </div>
-                                 </div>                                   
-                            </li>
-                            <li class="movie">
-								<div class="portfolio-item">
-									<img class="img-responsive" src="images/poster1.jpg" width="150" height="214"  alt="">
-										<div class="overlay">
-											<a class="preview btn btn-danger" href="images/poster1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
-                                        </div>
-                                 </div>                                   
-                            </li>
-                            <li class="movie">
-								<div class="portfolio-item">
-									<img class="img-responsive" src="images/poster9.jpg" width="150" height="214"  alt="">
-										<div class="overlay">
-											<a class="preview btn btn-danger" href="images/poster9.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
-                                        </div>
-                                 </div>                                   
-                            </li>
-                            <li class="movie">
-								<div class="portfolio-item">
-									<img class="img-responsive" src="images/poster10.jpg" width="150" height="214"  alt="">
-										<div class="overlay">
-											<a class="preview btn btn-danger" href="images/poster10.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
-                                        </div>
-                                 </div>                                   
-                            </li>
-                        </ul>
-                    </div>   
+      
+	  	<?php
+	//Set time zone to arizona mountain standard time
+	date_default_timezone_set('America/Phoenix');
+	
+	
+	//Only want to proceed entering the database if it is safe, that is, the page was submitted
 
-                   <div class="categoryTitle"><h1>10:00 events</h1></div>
-                    <div class="category">
-						<!--<marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">		-->			
-                        <ul class="categoryRow clearfix">
+	/* if (isset($_POST['submitted'])) { */
 
-                             <li class="movie">
-   
-                                        <div class="portfolio-item">
-                                                <img class="img-responsive" src="images/poster2.jpg"  alt="">
-                                                <div class="overlay">
-                                                    <a class="preview btn btn-danger" title="Malesuada fames ac turpis egestas" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
-                                                </div>
-                                        </div>
-                                                                           
-                            </li>
-                            <li class="movie">
-                                <span><img src="images/poster10.jpg" width="150" height="214"/></span>
-                            </li>
-                            <li class="movie">
-                                <span><img src="images/poster6.jpg" width="150" height="214"/></span>
-                            </li>
-                            <li class="movie">
-                                <span><img src="images/poster2.jpg" width="150" height="214"/></span>
-                            </li>
-                            <li class="movie">
-                                <span><img src="images/poster8.jpg" width="150" height="214"  /></span>                                    
-                            </li>
-                            <li class="movie">
-                                <span><img src="images/poster5.jpg" width="150" height="214"/></span>
-                            </li>
-                            <li class="movie">
-                                <span><img src="images/poster1.jpg" width="150" height="214"/></span>
-                            </li>
-                            <li class="movie">
-                                <span><img src="images/poster4.jpg" width="150" height="214"/></span>
-                            </li>
-                            <li class="movie">
-                                <span><img src="images/poster3.jpg" width="150" height="214"/></span>
-                            </li>
-							
-                        </ul>
-						<!--</marquee> -->
+	//Call on this file to connect to database
+	include('/local-connect.php');
+
+	//Define variables
+	$query = "SELECT * FROM  events WHERE EventstartTime BETWEEN '9:00' AND '21:00' "; // Select all events where the event starts between 9:00 AM and 9:00 PM
+	$result =  mysqli_query($dbc, $query) or die('error obtaining data'); // Store the results in a variable unless there was in error in the process
+	$unique =  array();
+	$img =  array();
+	
+	
+	while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
+	{
+		
+		//Store event columns in variables
+		$eventid = $row['EventId'];
+		$eventname = $row['EventName'];
+		$eventdate = $row['EventDate'];
+		$eventstart = $row['EventStartTime']; // will need to create an array to split into rows
+		$eventend = $row['EventEndTime'];
+		$eventloc = $row['EventLocation'];
+		$eventdes = $row['EventDescription'];
+		$eventcost = $row['EventCost'];
+		$eventsponsor = $row['EventSponsor'];
+		$eventschool = $row['EventSchool'];
+		$eventimg = $row['EventImg'];
+		$eventemail = $row['EventEmail'];
+		$eventphone = $row['EventPhoneNumber'];
+		$eventweb = $row['EventWebsiteAddress'];
+		$eventcat = $row['EventCategory'];
+		
+		$unique[] = $eventid;
+		$img[] = $eventimg;
+		$time[] = $eventstart;
+		//Call to the database and create modals
+		echo"<div class ='modal fade' id='modal-$eventid'>
+			<div class='modal-dialog modal-lg'>
+				<div class='modal-content'>
+					<div class ='modal-header'>
+						<button type ='button' class ='close' data-dismiss='modal'>&times;</button>
+						<h1 class='modal-title'>$eventname</h1>
+						<h1> $array[$count] </h1>
 						
-                    </div>   						
-                </div>    
-            </div>        
-
-                    <div class="categoryTitle"><h1>11:00 events</h1></div>
-                    <div class="category">
-                        <ul class="categoryRow clearfix">
-                            <li class="movie">
-								<div class="portfolio-item">
-									<img class="img-responsive" src="images/poster11.jpg" width="150" height="214"  alt="">
-										<div class="overlay">
-											<a class="preview btn btn-danger" href="images/poster11.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
-                                        </div>
-                                 </div>                                   
-                            </li>
-                            <li class="movie">
-								<div class="portfolio-item">
-									<img class="img-responsive" src="images/poster12.jpg" width="150" height="214"  alt="">
-										<div class="overlay">
-											<a class="preview btn btn-danger" href="images/poster12.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
-                                        </div>
-                                 </div>                                   
-                            </li>
-                            <li class="movie">
-								<div class="portfolio-item">
-									<img class="img-responsive" src="images/poster13.jpg" width="150" height="214"  alt="">
-										<div class="overlay">
-											<a class="preview btn btn-danger" href="images/poster13.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
-                                        </div>
-                                 </div>                                   
-                            </li>
-                            <li class="movie">
-								<div class="portfolio-item">
-									<img class="img-responsive" src="images/poster14.jpg" width="150" height="214"  alt="">
-										<div class="overlay">
-											<a class="preview btn btn-danger" href="images/poster14.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
-                                        </div>
-                                 </div>                                   
-                            </li>
-                            <li class="movie">
-								<div class="portfolio-item">
-									<img class="img-responsive" src="images/poster15.jpg" width="150" height="214"  alt="">
-										<div class="overlay">
-											<a class="preview btn btn-danger" href="images/poster15.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
-                                        </div>
-                                 </div>                                   
-                            </li>
-                            <li class="movie">
-								<div class="portfolio-item">
-									<img class="img-responsive" src="images/poster16.jpg" width="150" height="214"  alt="">
-										<div class="overlay">
-											<a class="preview btn btn-danger" href="images/poster16.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
-                                        </div>
-                                 </div>                                   
-                            </li>
-                            <li class="movie">
-								<div class="portfolio-item">
-									<img class="img-responsive" src="images/poster17.jpg" width="150" height="214"  alt="">
-										<div class="overlay">
-											<a class="preview btn btn-danger" href="images/poster17.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
-                                        </div>
-                                 </div>                                   
-                            </li>
-                            <li class="movie">
-								<div class="portfolio-item">
-									<img class="img-responsive" src="images/poster18.jpg" width="150" height="214"  alt="">
-										<div class="overlay">
-											<a class="preview btn btn-danger" href="images/poster18.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
-                                        </div>
-                                 </div>                                   
-                            </li>
-                            <li class="movie">
-								<div class="portfolio-item">
-									<img class="img-responsive" src="images/poster19.jpg" width="150" height="214"  alt="">
-										<div class="overlay">
-											<a class="preview btn btn-danger" href="images/poster19.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
-                                        </div>
-                                 </div>                                   
-                            </li>
-                        </ul>
-                    </div>   
-
-                   <div class="categoryTitle"><h1>12:00 events</h1></div>
-                    <div class="category">
-						<!--<marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">		-->			
-                        <ul class="categoryRow clearfix">
-
-                             <li class="movie">
-   
-                                        <div class="portfolio-item">
-                                                <img class="img-responsive" src="images/poster2.jpg"  alt="">
-                                                <div class="overlay">
-                                                    <a class="preview btn btn-danger" title="Malesuada fames ac turpis egestas" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
-                                                </div>
-                                        </div>
-                                                                           
-                            </li>
-                            <li class="movie">
-                                <span><img src="images/poster10.jpg" width="150" height="214"/></span>
-                            </li>
-                            <li class="movie">
-                                <span><img src="images/poster6.jpg" width="150" height="214"/></span>
-                            </li>
-                            <li class="movie">
-                                <span><img src="images/poster2.jpg" width="150" height="214"/></span>
-                            </li>
-                            <li class="movie">
-                                <span><img src="images/poster8.jpg" width="150" height="214"  /></span>                                    
-                            </li>
-                            <li class="movie">
-                                <span><img src="images/poster5.jpg" width="150" height="214"/></span>
-                            </li>
-                            <li class="movie">
-                                <span><img src="images/poster1.jpg" width="150" height="214"/></span>
-                            </li>
-                            <li class="movie">
-                                <span><img src="images/poster4.jpg" width="150" height="214"/></span>
-                            </li>
-                            <li class="movie">
-                                <span><img src="images/poster3.jpg" width="150" height="214"/></span>
-                            </li>
-							
-                        </ul>
-						<!--</marquee> -->
+					</div>
 						
-                    </div>   						
-                </div>    
-            </div>
+						<div class ='modal-body'>
+						<img src='$eventimg' alt='ticketmaster' height='45%' width='45%'/>
+					<h5><strong>Date: </strong>$eventdate</h5>
+					<h5><strong>Time: </strong>$eventstart - $eventend</h5>
+					<h5><strong>Location: </strong>$eventloc</h5>
+					<h5><strong>Sponsored by: </strong>$eventsponsor</h5>
+					<h5><strong>Affiliated with: </strong>$eventschool</h5>
+					<p><strong>Description: </strong></p><p>$eventdes</p>
+					
+						
+						</div>
+						
+						<div class='modal-footer'>
+						
+						<h5><strong>Email: </strong>$eventemail</h5>
+					<h5><strong>Phone Number: </strong>$eventphone</h5>
+					<h5><strong>Website: </strong>$eventweb</h5>	
+						
+						</div>
+						
+				</div>
+			</div>
+		</div>";
 			
-        </div> <!--! end of #container --> 
-		
-		
+	} // end while statement
 
-</br>	
+
+
+echo"<link href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet'>
+		<div class='container'>
+			<div class='row'>";
+			
+			//first row
+			echo"<h1>9:00 events</h1>";
+			for($i = 0; $i < count($time); $i++)
+			{
+				//create variables to hold the formatted, low range, and high range of time
+				$fmttime = strtotime($time[$i]);
+				$lowrange = strtotime("9:00:00");
+				$highrange = strtotime("12:00:00");
+				
+				if($fmttime >= $lowrange and $fmttime < $highrange)
+				{
+
+				echo"<div class='col-lg-2 col-sm-1'>
+					
+					<div class='card hovercard'>
+						<div class='cardheader'>
+						<a href='#'><img src='$img[$i]' alt='' /></a>
+						<div class='portfolio-item'>
+											<img class='img-responsive' src='$img[$i]'  alt=''/>
+													<div class='overlay'>
+													<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
+													</div>
+											</div>   
+						</div>
+
+						<div class='info'>
+						</br>
+							<div class='desc'>$time[$i]</div>
+						
+						</div>
+
+					</div>
+
+				</div>";
+				
+				} //end of if loop
+				
+				
+			} // end of for loop				
+			echo"</div>";// end of first row
+			
+			//second row
+			echo"<div class='row'>"; 
+			echo"<h1>12:00 events</h1>";
+			for($i = 0; $i < count($time); $i++)
+			{
+				//create variables to hold the formatted, low range, and high range of time
+				$fmttime = strtotime($time[$i]);
+				$lowrange = strtotime("12:00:00");
+				$highrange = strtotime("15:00:00");
+				
+				if($fmttime >= $lowrange and $fmttime < $highrange)
+				{
+
+				echo"<div class='col-lg-2 col-sm-1'>
+					
+					<div class='card hovercard'>
+						<div class='cardheader'>
+						<a href='#'><img src='$img[$i]' alt='' /></a>
+						<div class='portfolio-item'>
+											<img class='img-responsive' src='$img[$i]'  alt=''/>
+													<div class='overlay'>
+													<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
+													</div>
+											</div>   
+						</div>
+
+						<div class='info'>
+						</br>
+							<div class='desc'>$time[$i]</div>
+						
+						</div>
+
+					</div>
+
+				</div>";
+				
+				} //end of if loop
+				
+				
+			} // end of for loop				
+			echo"</div>";// end of second row		
+			
+			//third row
+			echo"<div class='row'>"; 
+			echo"<h1>3:00 events</h1>";
+			for($i = 0; $i < count($time); $i++)
+			{
+				//create variables to hold the formatted, low range, and high range of time
+				$fmttime = strtotime($time[$i]);
+				$lowrange = strtotime("15:00:00");
+				$highrange = strtotime("18:00:00");
+				
+				if($fmttime >= $lowrange and $fmttime < $highrange)
+				{
+
+				echo"<div class='col-lg-2 col-sm-1'>
+					
+					<div class='card hovercard'>
+						<div class='cardheader'>
+						<a href='#'><img src='$img[$i]' alt='' /></a>
+						<div class='portfolio-item'>
+											<img class='img-responsive' src='$img[$i]'  alt=''/>
+													<div class='overlay'>
+													<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
+													</div>
+											</div>   
+						</div>
+
+						<div class='info'>
+						</br>
+							<div class='desc'>$time[$i]</div>
+						
+						</div>
+
+					</div>
+
+				</div>";
+				
+				} //end of if loop
+				
+				
+			} // end of for loop			
+			echo"</div>"; // end of third row			
+			
+			//fourth row
+			echo"<div class='row'>"; 
+			echo"<h1>6:00 events</h1>";
+			for($i = 0; $i < count($time); $i++)
+			{
+				//create variables to hold the formatted, low range, and high range of time
+				$fmttime = strtotime($time[$i]);
+				$lowrange = strtotime("18:00:00");
+				$highrange = strtotime("21:00:00");
+				
+				if($fmttime >= $lowrange and $fmttime <= $highrange)
+				{
+
+				echo"<div class='col-lg-2 col-sm-1'>
+					
+					<div class='card hovercard'>
+						<div class='cardheader'>
+						<a href='#'><img src='$img[$i]' alt='' /></a>
+						<div class='portfolio-item'>
+											<img class='img-responsive' src='$img[$i]'  alt=''/>
+													<div class='overlay'>
+													<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
+													</div>
+											</div>   
+						</div>
+
+						<div class='info'>
+						</br>
+							<div class='desc'>$time[$i]</div>
+						
+						</div>
+
+					</div>
+
+				</div>";
+				
+				} //end of if loop
+				
+				
+			} // end of for loop			
+			echo"</div>"; // end of fourth row	
+echo"</div>"; // end of container
+
+	
+/* echo"<div id='container'>
+	<div id='header'></div>
+		<div id='main' role='main'>
+				<div id='browser'>
+                    <div class='categoryTitle'><h1>9:00 events</h1></div>
+                    <div class='category'>
+                        <ul class='categoryRow clearfix'>";
+						
+						for($j = 0; $j < 2;$j++)
+						{
+							if(strtotime($time[$i]) <= strtotime("15:00") and strtotime($time[$j]) >= strtotime("14:00"))
+							{
+								
+							
+						
+								for($i = 0; $i < 2; $i++)
+								{
+								
+									echo"<li class='movie'>
+											<div class='portfolio-item'>
+											<img class='img-responsive' src='../$img[$i]'  alt=''/>
+													<div class='overlay'>
+													<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
+													</div>
+											</div>                                   
+										</li>";
+								}
+						
+							}
+						}
+						
+						
+						
+							echo"</ul>
+				</div>
+				
+				
+				
+				<div class='categoryTitle'><h1>12:00 events</h1></div>
+				<div class='category'>
+                        <ul class='categoryRow clearfix'>";
+					for($i = 0; $i <$count; $i++)
+					{
+					
+                           echo"<li class='movie'>
+								<div class='portfolio-item'>
+								<img class='img-responsive' src='../$img[$i]' width='150' height='214'  alt=''/>
+										<div class='overlay'>
+										<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
+                                        </div>
+								</div>                                   
+                            </li>";
+					}
+							
+							echo"</ul>
+				</div>
+				
+				
+				
+				<div class='categoryTitle'><h1>3:00 events</h1></div>
+				<div class='category'>
+                        <ul class='categoryRow clearfix'>";
+					for($i = 0; $i <$count; $i++)
+					{
+					
+                           echo"<li class='movie'>
+								<div class='portfolio-item'>
+								<img class='img-responsive' src='../$img[$i]' width='150' height='214'  alt=''/>
+										<div class='overlay'>
+										<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
+                                        </div>
+								</div>                                   
+                            </li>";
+					}
+							
+							echo"</ul>
+				</div>
+				
+				
+				<div class='categoryTitle'><h1>6:00 events</h1></div>
+				<div class='category'>
+                        <ul class='categoryRow clearfix'>";
+					for($i = 0; $i <$count; $i++)
+					{
+					
+                           echo"<li class='movie'>
+								<div class='portfolio-item'>
+								<img class='img-responsive' src='../$img[$i]' width='150' height='214'  alt=''/>
+										<div class='overlay'>
+										<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
+                                        </div>
+								</div>                                   
+                            </li>";
+					}
+							
+							echo"</ul>
+				</div>
+				
+				
+				
+			</div>
+		</div>
+	</div>"; */
+	
+	?>
 		
     </header><!--/header-->	
 	

@@ -79,13 +79,15 @@
 
 .movie {
     /* asset width / height */
-    height: 214px; 
-    width: 150px;
-    background-color: gray;   /* in case asset does not load */ 
+    height: 150px; 
+    width: 214px;
+    background-color: black;   /* in case asset does not load */
+
 }
 
 .movie img {
     display: inline-block;
+
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -webkit-user-select: none;

@@ -29,12 +29,15 @@ Events Searched
 	
 		<!-- This meta tag allows the mobile version on mobile, tablet on tablet, desktop on desktop -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	        <link rel="stylesheet" href="../netflix-ui-master/css/main.css">
+
 
 </head><!--/head-->
 <body>
 
 
-    <header class="navbar navbar-inverse navbar-fixed-top wet-asphalt" role="banner">
+    <header class="navbar navbar-inverse navbar-fixed-top concrete" role="banner">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -58,7 +61,8 @@ Events Searched
         </div>
     </header>
 	
-	<?php
+
+	<?php	
 	//Only want to proceed entering the database if it is safe, that is, the page was submitted
 
 	/* if (isset($_POST['submitted'])) { */
@@ -67,15 +71,18 @@ Events Searched
 	include('../local-connect.php');
 
 	//Define variables
-	$query = "SELECT * FROM	events WHERE EventId = 1 "; // Select statement to call data from events category based on the search criteria
+	$query = "SELECT * FROM  events WHERE EventstartTime BETWEEN '9:00' AND '21:00' "; // Select all events where the event starts between 9:00 AM and 9:00 PM
 	$result =  mysqli_query($dbc, $query) or die('error obtaining data'); // Store the results in a variable unless there was in error in the process
+	
 	
 	while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
 	{
+		
 		//Store event columns in variables
+		$eventid = $row['EventId'];
 		$eventname = $row['EventName'];
 		$eventdate = $row['EventDate'];
-		$eventstart = $row['EventStartTime'];
+		$eventstart = $row['EventStartTime']; // will need to create an array to split into rows
 		$eventend = $row['EventEndTime'];
 		$eventloc = $row['EventLocation'];
 		$eventdes = $row['EventDescription'];
@@ -87,7 +94,11 @@ Events Searched
 		$eventphone = $row['EventPhoneNumber'];
 		$eventweb = $row['EventWebsiteAddress'];
 		$eventcat = $row['EventCategory'];
-	
+		
+		$unique[] = $eventid;
+		$img[] = $eventimg;
+		$time[] = $eventstart;
+		
 		echo 
 		"<div class = 'container'>	
 			<h1>$eventname</h1>
@@ -97,7 +108,7 @@ Events Searched
 				<div class = 'jumbotron text-left'>
 					<img src='../$eventimg' alt='ticketmaster' height='45%' width='45%'/>
 					<h5><strong>Date: </strong>$eventdate</h5>
-					<h5><strong>Time: </strong>$eventstart-$eventend</h5>
+					<h5><strong>Time: </strong>$eventstart - $eventend</h5>
 					<h5><strong>Location: </strong>$eventloc</h5>
 					<h5><strong>Sponsored by: </strong>$eventsponsor</h5>
 					<h5><strong>Affiliated with: </strong>$eventschool</h5>
@@ -108,8 +119,9 @@ Events Searched
 					<h5><strong>Website: </strong>$eventweb</h5>	
 				</div>
 			</div>";
+			
 	} // end while statement
-
+	
 	?>
 
 	
@@ -117,6 +129,18 @@ Events Searched
 			<p>&copy;2015, Uvents</p>
 			<p></p>
 	</div>
+	
+	<!-- Add your site or application content here -->
+        <script src="../netflix-ui-master/js/app.js"></script>
+        <script>  
+            //Kick start app
+            App.startup();
+        </script> 	
  
+		<script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.prettyPhoto.js"></script>
+	<script src="../js/jquery.isotope.min.js"></script>
+    <script src="../js/main.js"></script>
 	</body>
 </html>
