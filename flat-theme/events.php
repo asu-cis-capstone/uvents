@@ -162,9 +162,8 @@ echo"<link href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.m
 				echo"<div class='col-lg-2 col-sm-1'>
 					<div class='card hovercard'>
 						<div class='cardheader'>
-						<img src='$img[$i]' alt='' style='height: cover; width: ;' />
+						<img src='$img[$i]' alt='' />
 						<div class='portfolio-item'>
-							
 								<div class='overlay'>
 								<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
 								</div>
@@ -208,7 +207,6 @@ echo"<link href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.m
 						<div class='cardheader'>
 						<img src='$img[$i]' alt='' />
 						<div class='portfolio-item'>
-							<img class='img-responsive' src='$img[$i]'  alt=''/>
 								<div class='overlay'>
 								<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
 								</div>
@@ -250,9 +248,8 @@ echo"<link href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.m
 				echo"<div class='col-lg-2 col-sm-1'>
 					<div class='card hovercard'>
 						<div class='cardheader'>
-						<a href='#'><img src='$img[$i]' alt='' /></a>
+						<img src='$img[$i]' alt='' />
 						<div class='portfolio-item'>
-							<img class='img-responsive' src='$img[$i]'  alt=''/>
 								<div class='overlay'>
 								<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
 								</div>
@@ -296,7 +293,6 @@ echo"<link href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.m
 						<div class='cardheader'>
 						<img src='$img[$i]'  alt='' />
 						<div class='portfolio-item'>
-							<img class='img-responsive' src='$img[$i]'  alt=''/>
 								<div class='overlay'>
 								<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
 								</div>
