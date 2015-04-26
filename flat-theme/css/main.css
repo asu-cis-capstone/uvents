@@ -201,7 +201,7 @@ background-color: rgb(52, 73, 94);
     padding-top: 0;
     overflow: hidden;
     text-align: center;
-background-color: inherit;
+	background-color: inherit;
 }
 
 .card.hovercard .cardheader {
@@ -209,6 +209,7 @@ background-color: inherit;
     background-size: cover;
     height: 135px;
 }
+
 
 .card.hovercard .avatar {
     position: relative;

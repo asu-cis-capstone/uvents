@@ -120,7 +120,7 @@
 					</div>
 						
 						<div class ='modal-body'>
-						<img src='$eventimg' alt='ticketmaster' height='45%' width='45%'/>
+						<img src='$eventimg' alt='ticketmaster' height='25%' width='25%'/>
 					<h5><strong>Date: </strong>$date</h5>
 					<h5><strong>Time: </strong>$starttime - $endtime</h5>
 					<h5><strong>Location: </strong>$eventloc</h5>
@@ -162,9 +162,9 @@ echo"<link href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.m
 				echo"<div class='col-lg-2 col-sm-1'>
 					<div class='card hovercard'>
 						<div class='cardheader'>
-						<a href='#'><img src='$img[$i]' alt='' /></a>
+						<img src='$img[$i]' alt='' style='height: cover; width: ;' />
 						<div class='portfolio-item'>
-							<img class='img-responsive' src='$img[$i]'  alt=''/>
+							
 								<div class='overlay'>
 								<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
 								</div>
@@ -206,7 +206,7 @@ echo"<link href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.m
 				echo"<div class='col-lg-2 col-sm-1'>
 					<div class='card hovercard'>
 						<div class='cardheader'>
-						<a href='#'><img src='$img[$i]' alt='' /></a>
+						<img src='$img[$i]' alt='' />
 						<div class='portfolio-item'>
 							<img class='img-responsive' src='$img[$i]'  alt=''/>
 								<div class='overlay'>
@@ -294,7 +294,7 @@ echo"<link href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.m
 				echo"<div class='col-lg-2 col-sm-1'>
 					<div class='card hovercard'>
 						<div class='cardheader'>
-						<a href='#'><img src='$img[$i]' alt='' /></a>
+						<img src='$img[$i]'  alt='' />
 						<div class='portfolio-item'>
 							<img class='img-responsive' src='$img[$i]'  alt=''/>
 								<div class='overlay'>
