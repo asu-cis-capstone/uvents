@@ -457,7 +457,7 @@ echo"</div>"; // end of container */
                 line-height: 21px;
                 color: white;
                 font-size: 12px;
-                background: url(../images/b03.png) no-repeat;
+                background: url(../images/slider/b03.png) no-repeat;
                 overflow: hidden;
                 cursor: pointer;
             }
@@ -493,7 +493,7 @@ echo"</div>"; // end of container */
                 width: 55px;
                 height: 55px;
                 cursor: pointer;
-                background: url(../images/a01.png) no-repeat;
+                background: url(../images/slider/a01.png) no-repeat;
                 overflow: hidden;
             }
             .jssora03l { background-position: -3px -33px; }
@@ -604,7 +604,7 @@ echo"<h1>12:00 PM</h1>
                 line-height: 21px;
                 color: white;
                 font-size: 12px;
-                background: url(images/b03.png) no-repeat;
+                background: url(images/slider/b03.png) no-repeat;
                 overflow: hidden;
                 cursor: pointer;
             }
@@ -640,7 +640,7 @@ echo"<h1>12:00 PM</h1>
                 width: 55px;
                 height: 55px;
                 cursor: pointer;
-                background: url(../images/a03.png) no-repeat;
+                background: url(../images/slider/a03.png) no-repeat;
                 overflow: hidden;
             }
             .jssora03l { background-position: -3px -33px; }
@@ -749,7 +749,7 @@ echo"<h1>12:00 PM</h1>
                 line-height: 21px;
                 color: white;
                 font-size: 12px;
-                background: url(../images/b03.png) no-repeat;
+                background: url(../images/slider/b03.png) no-repeat;
                 overflow: hidden;
                 cursor: pointer;
             }
@@ -785,7 +785,7 @@ echo"<h1>12:00 PM</h1>
                 width: 55px;
                 height: 55px;
                 cursor: pointer;
-                background: url(../images/a03.png) no-repeat;
+                background: url(../images/slider/a03.png) no-repeat;
                 overflow: hidden;
             }
             .jssora03l { background-position: -3px -33px; }
@@ -893,7 +893,7 @@ echo"<h1>12:00 PM</h1>
                 line-height: 21px;
                 color: black;
                 font-size: 12px;
-                background: url(../images/b03.png) no-repeat;
+                background: url(../images/slider/b03.png) no-repeat;
                 overflow: hidden;
                 cursor: pointer;
             }
@@ -929,7 +929,7 @@ echo"<h1>12:00 PM</h1>
                 width: 55px;
                 height: 55px;
                 cursor: pointer;
-                background: url(../images/a09.png) no-repeat;
+                background: url(../images/slider/a09.png) no-repeat;
                 overflow: hidden;
             }
             .jssora03l { background-position: -3px -33px; }
