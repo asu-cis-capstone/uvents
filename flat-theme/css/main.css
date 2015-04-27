@@ -151,7 +151,7 @@ a:focus {
   min-width: 180px;
 }
 body > section {
-  padding: 50px 0;
+  padding: 50px 50px 50px 50px;
 }
 .turquoise,
 .green-sea,
