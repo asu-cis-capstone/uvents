@@ -5,7 +5,12 @@
     margin-right: auto;
  }
 
+/* Use this to resize the images in the latest blog */
 
+#col-md-3 col-sm-6 .pull-left{
+   max-width:50%;
+   max-height:50%;
+}
 
 /*!
  * Bootstrap v3.0.0
