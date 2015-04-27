@@ -21,11 +21,11 @@ Category: Career
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->       
-    <link rel="shortcut icon" href="../images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="../images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../images/ico/uventzblack.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/ico/uventzblack.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/ico/uventzblack.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/ico/uventzblack.png">
+    <link rel="apple-touch-icon-precomposed" href="../images/ico/uventzblack.png">
 	
 		<!-- This meta tag allows the mobile version on mobile, tablet on tablet, desktop on desktop -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,10 +48,10 @@ Category: Career
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="events.php">Events</a></li>
-                    <li><a href="clubs.htm">Clubs</a></li>
-                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../events.php">Events</a></li>
+                    <li><a href="../clubs.htm">Clubs</a></li>
+                    <li class = "active"><a href="../categories.html">Categories</a></li>
                 </ul>
             </div>
         </div>

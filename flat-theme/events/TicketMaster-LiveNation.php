@@ -21,11 +21,11 @@ TicketMaster
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->       
-    <link rel="shortcut icon" href="../images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="../images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../images/ico/uventzblack.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/ico/uventzblack.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/ico/uventzblack.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/ico/uventzblack.png">
+    <link rel="apple-touch-icon-precomposed" href="../images/ico/uventzblack.png">
 	
 		<!-- This meta tag allows the mobile version on mobile, tablet on tablet, desktop on desktop -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,7 +47,7 @@ TicketMaster
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="../index.html">
-								<img class="img-responsive" src="../images/LogoDone2.png" width = "110" height = "41"alt="">
+				<img class="img-responsive" src="../images/logotransparent2.png" width = "110" height = "41"alt="">
 				</a>
             </div>
             <div class="collapse navbar-collapse">
