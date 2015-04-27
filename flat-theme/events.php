@@ -496,7 +496,7 @@ echo"</div>"; // end of container */
                 width: 55px;
                 height: 55px;
                 cursor: pointer;
-                background: url(images/a03.png) no-repeat;
+                background: url(images/a01.png) no-repeat;
                 overflow: hidden;
             }
             .jssora03l { background-position: -3px -33px; }
@@ -894,7 +894,7 @@ echo"<h1>12:00 PM</h1>
                 height: 21px;
                 text-align: center;
                 line-height: 21px;
-                color: white;
+                color: black;
                 font-size: 12px;
                 background: url(images/b03.png) no-repeat;
                 overflow: hidden;
@@ -932,7 +932,7 @@ echo"<h1>12:00 PM</h1>
                 width: 55px;
                 height: 55px;
                 cursor: pointer;
-                background: url(images/a03.png) no-repeat;
+                background: url(images/a09.png) no-repeat;
                 overflow: hidden;
             }
             .jssora03l { background-position: -3px -33px; }
