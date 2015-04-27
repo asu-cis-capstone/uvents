@@ -33,7 +33,7 @@ Category: Design
 </head><!--/head-->
 
 <body>
-	<header class="navbar navbar-inverse navbar-fixed-top wet-asphalt" role="banner">
+<header class="navbar navbar-inverse navbar-fixed-top concrete" role="banner">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -42,20 +42,20 @@ Category: Design
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../index.html">
-								<img class="img-responsive" src="../images/LogoDone2.png" width = "110" height = "41"alt="">
+                <a class="navbar-brand" href="index.html">
+				<img class="img-responsive" src="../images/logotransparent2.png" width = "110" height = "41"alt="">
 				</a>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="../index.html">Home</a></li>
-                    <li class="active"><a href="../events.php">Events</a></li>
-                    <li><a href="../clubs.htm">Clubs</a></li>
-                    <li><a href="../categories.html">Categories</a></li>
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="events.php">Events</a></li>
+                    <li><a href="clubs.htm">Clubs</a></li>
+                    <li><a href="categories.html">Categories</a></li>
                 </ul>
             </div>
         </div>
-    </header>
+    </header><!--/header-->
 	</br>
 	
 

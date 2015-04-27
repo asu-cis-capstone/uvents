@@ -33,7 +33,7 @@ Events Searched
 </head><!--/head-->
 
 <body>
-	<header class="navbar navbar-inverse navbar-fixed-top wet-asphalt" role="banner">
+    <header class="navbar navbar-inverse navbar-fixed-top concrete" role="banner">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -43,7 +43,7 @@ Events Searched
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="../index.html">
-								<img class="img-responsive" src="../images/LogoDone2.png" width = "110" height = "41"alt="">
+								<img class="img-responsive" src="../images/logotransparent2.png" width = "110" height = "41"alt="">
 				</a>
             </div>
             <div class="collapse navbar-collapse">
