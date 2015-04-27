@@ -507,10 +507,12 @@ body > section {
 }
 #recent-works {
   padding: 90px 0;
+  margin-top: -5px;
 }
 #recent-works .item-inner {
   position: relative;
   margin: 0;
+  
 }
 .portfolio-items,
 .portfolio-filter {
