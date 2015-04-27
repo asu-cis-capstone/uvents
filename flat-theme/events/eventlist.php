@@ -49,7 +49,7 @@ Events Searched
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="../index.html">Home</a></li>
-                    <li class="active"><a href="../events.php">Events</a></li>
+                    <li class="active"><a href="../db/events.php">Events</a></li>
                     <li><a href="../clubs.htm">Clubs</a></li>
                     <li><a href="../categories.html">Categories</a></li>
                 </ul>

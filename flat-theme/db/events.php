@@ -6,20 +6,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>uvents</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prettyPhoto.css" rel="stylesheet">
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->       
-    <link rel="shortcut icon" href="images/ico/uventzblack.png">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/uventzblack.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/uventzblack.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/uventzblack.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/uventzblack.png">
+    <link rel="shortcut icon" href="../images/ico/uventzblack.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/ico/uventzblack.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/ico/uventzblack.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/ico/uventzblack.png">
+    <link rel="apple-touch-icon-precomposed" href="../images/ico/uventzblack.png">
 	
 
 	<!-- This meta tag allows the mobile version on mobile, tablet on tablet, desktop on desktop -->
@@ -29,10 +29,6 @@
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0"> 
-        <link rel="apple-touch-icon" href="img/branding/netflix.png"/>
-        
-        <!-- styles -->
-        <link rel="stylesheet" href="netflix-ui-master/css/main.css">
 
 	
 </head><!--/head-->
@@ -47,16 +43,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">
-				<img class="img-responsive" src="images/logotransparent2.png" width = "110" height = "41"alt="">
+                <a class="navbar-brand" href="../index.html">
+				<img class="img-responsive" src="../images/logotransparent2.png" width = "110" height = "41"alt="">
 				</a>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li class = "active"><a href="events.php">Events</a></li>
-                    <li><a href="clubs.htm">Clubs</a></li>
-                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="../clubs.htm">Clubs</a></li>
+                    <li><a href="../categories.html">Categories</a></li>
                 </ul>
             </div>
         </div>
@@ -65,15 +61,16 @@
 	  
 	<?php
 	//Set time zone to arizona mountain standard time
+	//if (isset($_POST['submitted'])) {
 	date_default_timezone_set('America/Phoenix');
 	
 	
 	//Only want to proceed entering the database if it is safe, that is, the page was submitted
 
-	/* if (isset($_POST['submitted'])) { */
+	
 
 	//Call on this file to connect to database
-	include('/local-connect.php');
+	include('../local-connect.php');
 
 	//Define variables
 	$query = "SELECT * FROM  events WHERE EventstartTime BETWEEN '9:00' AND '21:00' "; // Select all events where the event starts between 9:00 AM and 9:00 PM
@@ -119,7 +116,7 @@
 					</div>
 						
 						<div class ='modal-body'>
-						<img src='$eventimg' alt='ticketmaster' height='25%' width='25%'/>
+						<img src='../$eventimg' alt='ticketmaster' height='25%' width='25%'/>
 					<h5><strong>Date: </strong>$date</h5>
 					<h5><strong>Time: </strong>$starttime - $endtime</h5>
 					<h5><strong>Location: </strong>$eventloc</h5>
@@ -315,18 +312,18 @@ echo"<link href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.m
 			}					
 			echo"</div>"; // end of fourth row	
 echo"</div>"; // end of container */
-	
+	//}
 	?>
 		
     </header><!--/header-->	
 
 <!------------------------------------------------------------------------------------------Carousel code begins------------------------------------------------------------------------------------>
 	<!-- it works the same with all jquery version from 1.x to 2.x -->
-    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
     <!-- use jssor.slider.min.js instead for release -->
     <!-- jssor.slider.min.js = (jssor.js + jssor.slider.js) -->
-    <script type="text/javascript" src="js/jssor.js"></script>
-    <script type="text/javascript" src="js/jssor.slider.js"></script>
+    <script type="text/javascript" src="../js/jssor.js"></script>
+    <script type="text/javascript" src="../js/jssor.slider.js"></script>
     <script>
         jssor_slider1_starter = function (containerId) {
             var options = {
@@ -402,7 +399,7 @@ echo"</div>"; // end of container */
             <div style='filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
                         background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;'>
             </div>
-            <div style='position: absolute; display: block; background: url(images/loading.gif) no-repeat center center;
+            <div style='position: absolute; display: block; background: url(../images/loading.gif) no-repeat center center;
                         top: 0px; left: 0px;width: 100%;height:100%;'>
             </div>
         </div>";
@@ -425,7 +422,7 @@ echo"</div>"; // end of container */
 				$newtime = date("g:i",$fmttime);
 				
 				echo"<div>								
-						<img u= 'image' src='$img[$i]' alt='' />
+						<img u= 'image' src='../$img[$i]' alt='' />
 								<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
 						</div>";// end of first row
 				$found = true;
@@ -460,7 +457,7 @@ echo"</div>"; // end of container */
                 line-height: 21px;
                 color: white;
                 font-size: 12px;
-                background: url(images/b03.png) no-repeat;
+                background: url(../images/b03.png) no-repeat;
                 overflow: hidden;
                 cursor: pointer;
             }
@@ -496,7 +493,7 @@ echo"</div>"; // end of container */
                 width: 55px;
                 height: 55px;
                 cursor: pointer;
-                background: url(images/a01.png) no-repeat;
+                background: url(../images/a01.png) no-repeat;
                 overflow: hidden;
             }
             .jssora03l { background-position: -3px -33px; }
@@ -548,7 +545,7 @@ echo"<h1>12:00 PM</h1>
             <div style='filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
                         background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;'>
             </div>
-            <div style='position: absolute; display: block; background: url(images/loading.gif) no-repeat center center;
+            <div style='position: absolute; display: block; background: url(../images/loading.gif) no-repeat center center;
                         top: 0px; left: 0px;width: 100%;height:100%;'>
             </div>
         </div>";
@@ -571,7 +568,7 @@ echo"<h1>12:00 PM</h1>
 				$newtime = date("g:i",$fmttime);
 				
 				echo"<div>								
-						<img u= 'image' src='$img[$i]' alt='' />
+						<img u= 'image' src='../$img[$i]' alt='' />
 								<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
 						</div>";// end of first row
 				$found = true;
@@ -643,7 +640,7 @@ echo"<h1>12:00 PM</h1>
                 width: 55px;
                 height: 55px;
                 cursor: pointer;
-                background: url(images/a03.png) no-repeat;
+                background: url(../images/a03.png) no-repeat;
                 overflow: hidden;
             }
             .jssora03l { background-position: -3px -33px; }
@@ -693,7 +690,7 @@ echo"<h1>12:00 PM</h1>
             <div style='filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
                         background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;'>
             </div>
-            <div style='position: absolute; display: block; background: url(images/loading.gif) no-repeat center center;
+            <div style='position: absolute; display: block; background: url(../images/loading.gif) no-repeat center center;
                         top: 0px; left: 0px;width: 100%;height:100%;'>
             </div>
         </div>";
@@ -716,7 +713,7 @@ echo"<h1>12:00 PM</h1>
 				$newtime = date("g:i",$fmttime);
 				
 				echo"<div>								
-						<img u= 'image' src='$img[$i]' alt='' />
+						<img u= 'image' src='../$img[$i]' alt='' />
 								<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
 						</div>";// end of first row
 				$found = true;
@@ -752,7 +749,7 @@ echo"<h1>12:00 PM</h1>
                 line-height: 21px;
                 color: white;
                 font-size: 12px;
-                background: url(images/b03.png) no-repeat;
+                background: url(../images/b03.png) no-repeat;
                 overflow: hidden;
                 cursor: pointer;
             }
@@ -788,7 +785,7 @@ echo"<h1>12:00 PM</h1>
                 width: 55px;
                 height: 55px;
                 cursor: pointer;
-                background: url(images/a03.png) no-repeat;
+                background: url(../images/a03.png) no-repeat;
                 overflow: hidden;
             }
             .jssora03l { background-position: -3px -33px; }
@@ -837,7 +834,7 @@ echo"<h1>12:00 PM</h1>
             <div style='filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
                         background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;'>
             </div>
-            <div style='position: absolute; display: block; background: url(images/loading.gif) no-repeat center center;
+            <div style='position: absolute; display: block; background: url(../images/loading.gif) no-repeat center center;
                         top: 0px; left: 0px;width: 100%;height:100%;'>
             </div>
         </div>";
@@ -860,7 +857,7 @@ echo"<h1>12:00 PM</h1>
 				$newtime = date("g:i",$fmttime);
 				
 				echo"<div>								
-						<img u= 'image' src='$img[$i]' alt='' />
+						<img u= 'image' src='../$img[$i]' alt='' />
 								<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
 						</div>";// end of first row
 				$found = true;
@@ -896,7 +893,7 @@ echo"<h1>12:00 PM</h1>
                 line-height: 21px;
                 color: black;
                 font-size: 12px;
-                background: url(images/b03.png) no-repeat;
+                background: url(../images/b03.png) no-repeat;
                 overflow: hidden;
                 cursor: pointer;
             }
@@ -932,7 +929,7 @@ echo"<h1>12:00 PM</h1>
                 width: 55px;
                 height: 55px;
                 cursor: pointer;
-                background: url(images/a09.png) no-repeat;
+                background: url(../images/a09.png) no-repeat;
                 overflow: hidden;
             }
             .jssora03l { background-position: -3px -33px; }
@@ -977,12 +974,6 @@ echo"<h1>12:00 PM</h1>
 	
 ?>	
 
-        <!-- Add your site or application content here -->
-        <script src="netflix-ui-master/js/app.js"></script>
-        <script>  
-            //Kick start app
-            App.startup();
-        </script> 
 		
     <footer id="footer" class="midnight-blue">
         <div class="container">
@@ -1003,9 +994,9 @@ echo"<h1>12:00 PM</h1>
         </div>
     </footer><!--/#footer-->
 	
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.prettyPhoto.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

@@ -49,7 +49,7 @@ Category: Free Food
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="../index.html">Home</a></li>
-                    <li><a href="../events.php">Events</a></li>
+                    <li><a href="../db/events.php">Events</a></li>
                     <li><a href="../clubs.htm">Clubs</a></li>
                     <li class = "active"><a href="../categories.html">Categories</a></li>
                 </ul>
