@@ -136,12 +136,187 @@
 			
 	} // end while statement
 
+
+/* $found =  false; // boolean to allow or disallow an invisible spacing between each row, if no events fall between that time range
+
+echo"<link href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet'>
+		<div class='container'>
+			<div class='row'>";
+			
+			//--------------------------------------first row--------------------------------------------------
+			echo"<h1>9:00 AM events</h1>";
+			for($i = 0; $i < count($time); $i++)
+			{
+				//create variables to hold the formatted, low range, and high range of time
+				$fmttime = strtotime($time[$i]);
+				$lowrange = strtotime("9:00:00");
+				$highrange = strtotime("12:00:00");
+				
+				if($fmttime >= $lowrange and $fmttime < $highrange)
+				{
+				$newtime = date("g:i",$fmttime);
+				echo"<div class='col-lg-2 col-sm-1'>
+					<div class='card hovercard'>
+						<div class='cardheader'>
+						<img src='$img[$i]' alt='' />
+						<div class='portfolio-item'>
+								<div class='overlay'>
+								<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
+								</div>
+							</div>   
+						</div>
+						<div class='info'>
+						</br>
+							<div class='desc'>$newtime</div>
+						</div>
+					</div>
+				</div>";
+				$found = true;
+				} //end of if loop
+			} // end of for loop
+			if($found == false)			
+			{
+				//Place an invisible hovercard in the row if there are no results retrieved back from the database
+				echo"<div class='col-lg-2 col-sm-1'>
+							<div class='card hovercard-invisible'></div>
+						</div>";
+			}
+			echo"</div>";// end of first row
+			
+			
+			//--------------------------------------second row---------------------------------------------
+			echo"<div class='row'>"; 
+			echo"<h1>12:00 PM events</h1>";
+			$found = false;// reset the found variable to false
+			for($i = 0; $i < count($time); $i++)
+			{
+				//create variables to hold the formatted, low range, and high range of time
+				$fmttime = strtotime($time[$i]);
+				$lowrange = strtotime("12:00:00");
+				$highrange = strtotime("15:00:00");
+				
+				if($fmttime >= $lowrange and $fmttime < $highrange)
+				{
+				$newtime = date("g:i A",$fmttime);
+				echo"<div class='col-lg-2 col-sm-1'>
+					<div class='card hovercard'>
+						<div class='cardheader'>
+						<img src='$img[$i]' alt='' />
+						<div class='portfolio-item'>
+								<div class='overlay'>
+								<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
+								</div>
+							</div>   
+						</div>
+						<div class='info'>
+						</br>
+							<div class='desc'>$newtime</div>
+						</div>
+					</div>
+				</div>";
+				$found ==true;
+				} //end of if loop
+			} // end of for loop
+			if($found == false)			
+			{
+				//Place an invisible hovercard in the row if there are no results retrieved back from the database
+				echo"<div class='col-lg-2 col-sm-1'>
+							<div class='card hovercard-invisible'></div>
+						</div>";
+			}			
+			echo"</div>";// end of second row
+			
+			
+			//----------------------------------------third row---------------------------------------------
+			echo"<div class='row'>"; 
+			echo"<h1>3:00 PM events</h1>";
+			$found = false;// reset the found variable to false
+			for($i = 0; $i < count($time); $i++)
+			{
+				//create variables to hold the formatted, low range, and high range of time
+				$fmttime = strtotime($time[$i]);
+				$lowrange = strtotime("15:00:00");
+				$highrange = strtotime("18:00:00");
+				
+				if($fmttime >= $lowrange and $fmttime < $highrange)
+				{
+				$newtime = date("g:i",$fmttime);
+				echo"<div class='col-lg-2 col-sm-1'>
+					<div class='card hovercard'>
+						<div class='cardheader'>
+						<img src='$img[$i]' alt='' />
+						<div class='portfolio-item'>
+								<div class='overlay'>
+								<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
+								</div>
+							</div>   
+						</div>
+						<div class='info'>
+						</br>
+							<div class='desc'>$newtime</div>
+						</div>
+					</div>
+				</div>";
+				$found = true;
+				} //end of if loop
+			} // end of for loop
+			if($found == false)			
+			{
+				//Place an invisible hovercard in the row if there are no results retrieved back from the database
+				echo"<div class='col-lg-2 col-sm-1'>
+							<div class='card hovercard-invisible'></div>
+						</div>";
+			}					
+			echo"</div>"; // end of third row
+			
+			
+			//--------------------------------------fourth row---------------------------------------------
+			echo"<div class='row'>"; 
+			echo"<h1>6:00 PM events</h1>";
+			$found = false;// reset the found variable to false
+			for($i = 0; $i < count($time); $i++)
+			{
+				//create variables to hold the formatted, low range, and high range of time
+				$fmttime = strtotime($time[$i]);
+				$lowrange = strtotime("18:00:00");
+				$highrange = strtotime("21:00:00");
+				
+				if($fmttime >= $lowrange and $fmttime <= $highrange)
+				{
+				$newtime = date("g:i",$fmttime);
+				echo"<div class='col-lg-2 col-sm-1'>
+					<div class='card hovercard'>
+						<div class='cardheader'>
+						<img src='$img[$i]'  alt='' />
+						<div class='portfolio-item'>
+								<div class='overlay'>
+								<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
+								</div>
+							</div>   
+						</div>
+						<div class='info'>
+						</br>
+							<div class='desc'>$newtime</div>
+						</div>
+					</div>
+				</div>";
+				$found = true;
+				} //end of if loop								
+			} // end of for loop
+			if($found == false)			
+			{
+				//Place an invisible hovercard in the row if there are no results retrieved back from the database
+				echo"<div class='col-lg-2 col-sm-1'>
+							<div class='card hovercard-invisible'></div>
+						</div>";
+			}					
+			echo"</div>"; // end of fourth row	
+echo"</div>"; // end of container */
 	//}
 	?>
 		
     </header><!--/header-->	
-	
-	
+
 <!------------------------------------------------------------------------------------------Carousel code begins------------------------------------------------------------------------------------>
 	<!-- it works the same with all jquery version from 1.x to 2.x -->
     <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
@@ -210,7 +385,6 @@
 			$("img").error(function(){$(this).hide();}); //Will hide the broken image tag if the image directory is broken
         };
     </script>
-	
 	<?php
     //-- Jssor Slider Begin -->
 	echo"<div class ='container'>
@@ -806,7 +980,7 @@ echo"<h1>12:00 PM</h1>
 	
 ?>	
 
-
+		
     <footer id="footer" class="midnight-blue">
         <div class="container">
             <div class="row">
@@ -829,7 +1003,6 @@ echo"<h1>12:00 PM</h1>
     <script src="../js/jquery.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery.prettyPhoto.js"></script>
-	<script src="../js/jquery.isotope.min.js"></script>
     <script src="../js/main.js"></script>
 </body>
 </html>
