@@ -21,11 +21,11 @@ Events Searched
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->       
-    <link rel="shortcut icon" href="../images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="../images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../images/ico/uventzblack.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/ico/uventzblack.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/ico/uventzblack.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/ico/uventzblack.png">
+    <link rel="apple-touch-icon-precomposed" href="../images/ico/uventzblack.png">
 	
 		<!-- This meta tag allows the mobile version on mobile, tablet on tablet, desktop on desktop -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,8 +79,10 @@ Events Searched
 				echo "<hgroup class=\"mb20\">";
 					if ($criteria != '')
 					{
+						//echo "<h1>Search Results</h1>";
+						//echo "<h2 class=\"lead\"><strong class=\"text-danger\">$count</strong> results were found for the search for <strong class=\"text-danger\">$criteria</strong></h2>";	
 						echo "<h1>Search Results</h1>";
-						echo "<h2 class=\"lead\"><strong class=\"text-danger\">$count</strong> results were found for the search for <strong class=\"text-danger\">$criteria</strong></h2>";	
+
 					}
 				
 					elseif ($criteria == '') 
