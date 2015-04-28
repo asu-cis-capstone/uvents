@@ -82,6 +82,7 @@ Events Searched
 						//echo "<h1>Search Results</h1>";
 						//echo "<h2 class=\"lead\"><strong class=\"text-danger\">$count</strong> results were found for the search for <strong class=\"text-danger\">$criteria</strong></h2>";	
 						echo "<h1>Search Results</h1>";
+						echo "<h2 class=\"lead\"><strong class=\"text-danger\"></strong>Here are all the events in your area for <strong class=\"text-danger\"> $criteria</strong></h2>";											
 
 					}
 				

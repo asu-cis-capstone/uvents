@@ -84,7 +84,7 @@ Category: Design
 			{
 				
 				$eventname = $row['EventName']; // store the eventname value in a variable
-				$webpage =  str_replace("/", "-", str_replace(" ", "-", ltrim(rtrim($eventname)))); //format,trim, and store the value in a variable
+				$webpage =  str_replace(":", "-",str_replace("/", "-", str_replace(" ", "-", ltrim(rtrim($eventname))))); //format,trim, and store the value in a variable
 				
 				$eventdate = $row['EventDate'];
 				$eventstart = $row['EventStartTime'];
