@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+s<!DOCTYPE html>
 
 <!-- 
 Donuts with Deloitt
@@ -74,7 +74,7 @@ Donuts with Deloitt
 	include('../local-connect.php');
 
 	//Define variables
-	$query = "SELECT * FROM  events WHERE EventName = 'Donuts with Deloitt' "; // Select all events where the event starts between 9:00 AM and 9:00 PM
+	$query = "SELECT * FROM  events WHERE EventId = '23' "; // Select all events where the event starts between 9:00 AM and 9:00 PM
 	$result =  mysqli_query($dbc, $query) or die('error obtaining data'); // Store the results in a variable unless there was in error in the process
 	
 	
