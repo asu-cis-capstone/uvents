@@ -805,7 +805,7 @@ echo"<h1>12:00 PM</h1>
 ?>	
 
 		
-    <footer id="footer" class="midnight-blue">
+    <footer id="footer" class="concrete">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">

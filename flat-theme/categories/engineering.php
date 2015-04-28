@@ -171,7 +171,7 @@ Category: Business
 	</div>
  
 	</body>
-    <footer id="footer" class="midnight-blue">
+    <footer id="footer" class="concrete">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
