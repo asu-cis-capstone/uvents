@@ -804,6 +804,42 @@ echo"<h1>12:00 PM</h1>
 	
 ?>	
 
+<?php
+
+$days = 3;
+$montharray[$days+1];
+
+echo"<section id='portfolio' class='container'>
+        <ul class='portfolio-filter'>
+            <li><a class='btn btn-primary active' href='#' data-filter='*'>All</a></li>"; 
+			for($p=0;$p<$days;$p++)
+			{
+				// Store the month and day in a string
+				$monthday = date("F jS",strtotime("+ $p day")); 
+				$montharray[$p] = $monthday; 
+				//$monthday = date(" F jS",strtotime("+ $p day")); 
+				
+				echo"<li><a class='btn btn-default' href='#' data-filter='portfolio item .$monthday'>$monthday</a></li>";
+			}
+			echo"</ul>";	
+		
+		echo"<ul class='portfolio-items col-3>";
+		for($num=0;$num<$days;$num++)
+		{
+		
+		echo"<li class='portfolio-item $monthday'>
+					<div class='item-inner'>
+					<img src ='../images/ticketmaster.jpg'>
+                    <h5>$montharray[$num]</h5>
+					<div>
+				</li>";
+		}
+             
+        echo"</ul>
+    </section>";
+		?>
+
+
 		
     <footer id="footer" class="concrete">
         <div class="container">
@@ -827,6 +863,7 @@ echo"<h1>12:00 PM</h1>
     <script src="../js/jquery.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery.prettyPhoto.js"></script>
+	<script src="../js/jquery.isotope.min.js"></script>
     <script src="../js/main.js"></script>
 </body>
 </html>
