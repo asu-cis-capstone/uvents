@@ -223,12 +223,6 @@ Events Searched
 	} // end of if statement
 	?>
 
-	
-	
-	<div class = "container text-center">
-			<p>&copy;2015, Uvents</p>
-			<p></p>
-	</div>
  
 	</body>
     <footer id="footer" class="midnight-blue">

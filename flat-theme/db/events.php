@@ -78,7 +78,6 @@
 	$unique =  array();
 	$img =  array();
 	
-	
 	while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
 	{
 		
@@ -112,7 +111,6 @@
 					<div class ='modal-header'>
 						<button type ='button' class ='close' data-dismiss='modal'>&times;</button>
 						<h1 class='modal-title'>$eventname</h1>
-						<h1> $array[$count] </h1>
 					</div>
 						
 						<div class ='modal-body'>
@@ -139,7 +137,6 @@
 	//}
 	?>
 		
-    </header><!--/header-->	
 
 <!------------------------------------------------------------------------------------------Carousel code begins------------------------------------------------------------------------------------>
 	<!-- it works the same with all jquery version from 1.x to 2.x -->
@@ -620,6 +617,8 @@ echo"<h1>12:00 PM</h1>
             .jssora03r:hover { background-position: -183px -33px; }
             .jssora03l.jssora03ldn { background-position: -243px -33px; }
             .jssora03r.jssora03rdn { background-position: -303px -33px; }
+			
+			
         </style>
         <!-- Arrow Left -->
         <span u='arrowleft' class='jssora03l' style='top: 123px; left: 8px;'>
@@ -766,8 +765,6 @@ echo"<h1>12:00 PM</h1>
             .jssora03r:hover { background-position: -183px -33px; }
             .jssora03l.jssora03ldn { background-position: -243px -33px; }
             .jssora03r.jssora03rdn { background-position: -303px -33px; }
-			
-			
         </style>
         <!-- Arrow Left -->
         <span u='arrowleft' class='jssora03l' style='top: 123px; left: 8px;'>
@@ -841,7 +838,7 @@ echo"<section id='portfolio' class='container'>
 
 
 		
-    <footer id="footer" class="concrete">
+    <footer id="footer" class="midnight-blue">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
