@@ -77,7 +77,7 @@
 	$result =  mysqli_query($dbc, $query) or die('error obtaining data'); // Store the results in a variable unless there was in error in the process
 	$unique =  array();
 	$img =  array();
-	
+	$datearry = array();
 	while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
 	{
 		
@@ -101,9 +101,12 @@
 		$unique[] = $eventid;
 		$img[] = $eventimg;
 		$time[] = $eventstart;
+		$heading = date("l, M j",strtotime($eventdate));
+		$datearray[] =$heading;
 		$starttime = date("g:i A",strtotime($eventstart));
 		$endtime = date("g:i A",strtotime($eventend));
 		$date = date("l, F jS, Y",strtotime($eventdate));
+
 		//Call to the database and create modals
 		echo"<div class ='modal fade' id='modal-$eventid'>
 			<div class='modal-dialog modal-lg'>
@@ -216,9 +219,10 @@
 	
     echo"<!-- To move inline styles to css file/block, please specify a class name for each element. --> 
 	<div id='slider1_container' style='position: relative; top: inherit;  left: inherit; width: 1009px; height: 150px; overflow: hidden; '>
-
+		
         <!-- Loading Screen -->
         <div u='loading' style='position: absolute; top: 0px; left: 0px;'>
+			
             <div style='filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
                         background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;'>
             </div>
@@ -243,9 +247,11 @@
 				if($fmttime >= $lowrange and $fmttime < $highrange)
 				{
 				$newtime = date("g:i",$fmttime);
-				
+		
 				echo"<div>								
+				
 						<img u= 'image' src='../$img[$i]' alt='' />
+						<div style='background-color: rgb(44, 62, 80); color: white; text-indent: 5px; font-size: 15px;'>$datearray[$i]</div>
 								<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
 						</div>";// end of first row
 				$found = true;
@@ -377,7 +383,7 @@ echo"<h1>12:00 PM</h1>
         echo"<div u='slides' style='cursor: pointer; position: absolute; left: 0px; top: 0px; width: 1009px; height: 150px; overflow: hidden;'>";
 		
 			
-			//--------------------------------------first row--------------------------------------------------
+			//--------------------------------------second row--------------------------------------------------
 			$found = false;// reset the found variable to false
 			for($i = 0; $i < count($time); $i++)
 			{
@@ -385,13 +391,15 @@ echo"<h1>12:00 PM</h1>
 				$fmttime = strtotime($time[$i]);
 				$lowrange = strtotime("12:00:00");
 				$highrange = strtotime("15:00:00");
-				
+				$newdate = $datearray[$i];
 				if($fmttime >= $lowrange and $fmttime < $highrange)
 				{
 				$newtime = date("g:i",$fmttime);
 				
 				echo"<div>								
+				
 						<img u= 'image' src='../$img[$i]' alt='' />
+						<div style='background-color: rgb(44, 62, 80); color: white; text-indent: 5px; font-size: 15px;'>$datearray[$i]</div>
 								<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
 						</div>";// end of first row
 				$found = true;
@@ -427,7 +435,7 @@ echo"<h1>12:00 PM</h1>
                 line-height: 21px;
                 color: white;
                 font-size: 12px;
-                background: url(images/slider/b03.png) no-repeat;
+                background: url(../images/slider/b03.png) no-repeat;
                 overflow: hidden;
                 cursor: pointer;
             }
@@ -530,13 +538,15 @@ echo"<h1>12:00 PM</h1>
 				$fmttime = strtotime($time[$i]);
 				$lowrange = strtotime("15:00:00");
 				$highrange = strtotime("18:00:00");
-				
+				$newdate = $datearray[$i];
 				if($fmttime >= $lowrange and $fmttime < $highrange)
 				{
 				$newtime = date("g:i",$fmttime);
 				
 				echo"<div>								
+				
 						<img u= 'image' src='../$img[$i]' alt='' />
+						<div style='background-color: rgb(44, 62, 80); color: white; text-indent: 5px; font-size: 15px;'>$datearray[$i]</div>
 								<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
 						</div>";// end of first row
 				$found = true;
@@ -676,17 +686,17 @@ echo"<h1>12:00 PM</h1>
 				$fmttime = strtotime($time[$i]);
 				$lowrange = strtotime("18:00:00");
 				$highrange = strtotime("21:00:00");
-				
-				if($fmttime >= $lowrange and $fmttime <= $highrange)
+				$newdate = $datearray[$i];
+				if($fmttime >= $lowrange and $fmttime < $highrange)
 				{
 				$newtime = date("g:i",$fmttime);
 				
-				echo"<div class = 'image'>
-						<img u= 'image' src='../$img[$i]' alt='' />
-								<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
-						</div>";// end of first row 
-						
+				echo"<div>								
 				
+						<img u= 'image' src='../$img[$i]' alt='' />
+						<div style='background-color: rgb(44, 62, 80); color: white; text-indent: 5px; font-size: 15px;'>$datearray[$i]</div>
+								<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
+						</div>";// end of first row
 				$found = true;
 				} //end of if loop								
 			} // end of for loop
@@ -803,7 +813,7 @@ echo"<h1>12:00 PM</h1>
 
 <?php
 
-$days = 3;
+/* $days = 3;
 $montharray[$days+1];
 
 echo"<section id='portfolio' class='container'>
@@ -833,8 +843,8 @@ echo"<section id='portfolio' class='container'>
 		}
              
         echo"</ul>
-    </section>";
-		?>
+    </section>"; */
+		?> 
 
 
 		
