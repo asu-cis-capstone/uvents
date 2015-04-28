@@ -149,7 +149,6 @@
     <script type="text/javascript" src="../js/jssor.js"></script>
     <script type="text/javascript" src="../js/jssor.slider.js"></script>
     <script>
-	
         jssor_slider1_starter = function (containerId) {
             var options = {
                 $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
@@ -206,7 +205,6 @@
             $Jssor$.$AddEvent(window, "resize", $Jssor$.$WindowResizeFilter(window, ScaleSlider));
             $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
             ////responsive code end
-			$("img").error(function(){$(this).hide();}); //Will hide the broken image tag if the image directory is broken
         };
     </script>
 	<?php
@@ -620,8 +618,6 @@ echo"<h1>12:00 PM</h1>
             .jssora03r:hover { background-position: -183px -33px; }
             .jssora03l.jssora03ldn { background-position: -243px -33px; }
             .jssora03r.jssora03rdn { background-position: -303px -33px; }
-			
-			
         </style>
         <!-- Arrow Left -->
         <span u='arrowleft' class='jssora03l' style='top: 123px; left: 8px;'>
@@ -684,12 +680,10 @@ echo"<h1>12:00 PM</h1>
 				{
 				$newtime = date("g:i",$fmttime);
 				
-				echo"<div class = 'image'>
+				echo"<div>								
 						<img u= 'image' src='../$img[$i]' alt='' />
 								<button type = 'button' class = 'btn btn-invisible' data-toggle='modal' data-target='#modal-$unique[$i]'></button>
-						</div>";// end of first row 
-						
-				
+						</div>";// end of first row
 				$found = true;
 				} //end of if loop								
 			} // end of for loop
@@ -813,7 +807,7 @@ echo"<h1>12:00 PM</h1>
                 </div>
                 <div class="col-sm-6">
                     <ul class="pull-right">
-                        <li><a href="#">Home</a></li>+
+                        <li><a href="#">Home</a></li>
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Faq</a></li>
                         <li><a href="#">Contact Us</a></li>
